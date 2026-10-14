@@ -15,11 +15,12 @@
 </head>
 <body>
 
-    <!-- Yüzen Modern Header (Altı Çizgili) -->
+    <!-- Yüzen Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="index.html" class="logo">
-                <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
+                <!-- LOGO BOYUTU BURADAN BÜYÜTÜLDÜ -->
+                <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img" style="max-height: 135px; padding-top: 5px;">
             </a>
             
             <nav class="desktop-nav" id="main-nav">
@@ -59,11 +60,12 @@
     <main>
         <!-- Modern Hero Bölümü (Video Arka Planlı) -->
         <section class="hero-premium">
-            <!-- Arka Planda Soft Video -->
-            <video autoplay muted loop playsinline class="hero-bg-video">
+            <!-- VİDEO DAHA BELİRGİN HALE GETİRİLDİ (opacity: 0.65) -->
+            <video autoplay muted loop playsinline class="hero-bg-video" style="opacity: 0.65;">
                 <source src="assets/img/bg-video.mp4" type="video/mp4">
             </video>
-            <div class="hero-video-overlay"></div> <!-- Yazıların okunması için katman -->
+            <!-- ÜZERİNDEKİ SİS KATMANI İNCELTİLDİ -->
+            <div class="hero-video-overlay" style="background: linear-gradient(to right, rgba(248, 250, 252, 0.85) 0%, rgba(248, 250, 252, 0.2) 100%);"></div>
 
             <div class="container hero-premium-inner">
                 <div class="hero-content reveal-left">
@@ -72,7 +74,8 @@
                     </div>
                     <h1 class="hero-title">
                         Hayatın Tüm <br>Risklerine Karşı <br>
-                        <span class="gradient-text">Akıllı Güvence.</span>
+                        <!-- YAZI MAVİDEN KIRMIZIYA ÇEVRİLDİ -->
+                        <span class="gradient-text" style="background: linear-gradient(135deg, #00D4FF 0%, #FF0055 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">Akıllı Güvence.</span>
                     </h1>
                     <p class="hero-desc">Bireysel ve kurumsal tüm sigorta ihtiyaçlarınız için yapay zeka destekli analizler ve insan odaklı danışmanlık bir arada.</p>
                     
@@ -148,7 +151,6 @@
                 </div>
 
                 <div class="product-grid-4">
-                    <!-- Kart 1 -->
                     <div class="premium-card">
                         <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Araç Sigortası" class="card-img">
                         <div class="card-gradient"></div>
@@ -160,7 +162,6 @@
                         </div>
                     </div>
 
-                    <!-- Kart 2 -->
                     <div class="premium-card">
                         <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Konut Sigortası" class="card-img">
                         <div class="card-gradient"></div>
@@ -172,7 +173,6 @@
                         </div>
                     </div>
 
-                    <!-- Kart 3 -->
                     <div class="premium-card">
                         <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" alt="Sağlık Sigortası" class="card-img">
                         <div class="card-gradient"></div>
@@ -184,7 +184,6 @@
                         </div>
                     </div>
 
-                    <!-- Kart 4 -->
                     <div class="premium-card">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="İşyeri Sigortası" class="card-img">
                         <div class="card-gradient"></div>
@@ -255,7 +254,7 @@
         <div class="container footer-inner">
             <div class="footer-col brand-col">
                 <a href="index.html" class="footer-logo logo">
-                    <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
+                    <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img" style="filter: brightness(0) invert(1); max-height: 100px;">
                 </a>
                 <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
             </div>
@@ -292,8 +291,8 @@
     <a href="https://wa.me/905303819090" target="_blank" class="floating-wa-btn">
         <div class="floating-wa-icon"><i data-lucide="message-circle"></i></div>
         <div class="floating-wa-text">
-            <span class="wa-title">Online Teklif</span>
-            <span class="wa-desc">WhatsApp'tan yazabilirsiniz</span>
+            <span class="floating-wa-title">Online Teklif</span>
+            <span class="floating-wa-desc">WhatsApp'tan yazabilirsiniz</span>
         </div>
     </a>
 
