@@ -4,120 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigorta Rehberi | ASSAM SİGORTA</title>
-    <meta name="description" content="Sigorta poliçeleri, mevzuatlar ve sık sorulan sorular hakkında faydalı bilgiler, rehberler ve ipuçları.">
+    <meta name="description" content="Sigortacılık dünyasına dair güncel bilgiler, ipuçları ve merak edilen soruların cevapları ASSAM Sigorta Rehberinde.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-
-    <!-- Header ve Top Bar Standart -->
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
+<body style="background-color: var(--color-bg-light);">
 
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
                     <li class="dropdown">
-                        <a href="sigorta-urunleri.html">Sigorta Ürünleri <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                        <a href="sigorta-urunleri.html">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
                             <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
                             <li><a href="sigorta/dask.html">DASK</a></li>
                             <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
-                            <li><a href="sigorta-urunleri.html" class="view-all">Tüm Ürünleri İncele &rarr;</a></li>
+                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
+                            <li><a href="sigorta/isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
                         </ul>
                     </li>
-                    <li><a href="hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="rehber.html" class="active">Sigorta Rehberi</a></li>
+                    <li><a href="hasar-destek.html">Hasar Anında</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <a href="teklif-al.html" class="btn btn-glow">Teklif Al</a>
                 <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Sigorta Rehberi</h1>
-                <p>Doğru poliçeyi seçmeniz ve haklarınızı bilmeniz için hazırladığımız faydalı içerikler.</p>
+        <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
+            <div class="container reveal-up">
+                <h1 style="color: #fff; font-size: 3.5rem; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 15px;">Sigorta Rehberi</h1>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem;">Bilinçli kararlar almak için uzmanlarımızdan sektör ipuçları.</p>
             </div>
         </section>
 
-        <section class="section bg-light">
+        <section class="section">
             <div class="container">
-                <!-- Blog Grid -->
-                <div class="blog-grid">
+                <div class="blog-grid" style="display: grid; gap: 40px;">
                     
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <!-- Gerçekte buraya görsel gelecek. Şimdilik placeholder. -->
-                            <div class="image-placeholder" style="aspect-ratio: 16/9;"><i data-lucide="car" style="width:40px;height:40px;opacity:0.5;"></i></div>
+                    <!-- Blog Kartı 1 -->
+                    <article class="blog-card reveal-up" style="background: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.03);">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Kasko" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
                         </div>
-                        <div class="blog-content">
-                            <span class="blog-category">Araç Sigortaları</span>
-                            <h3><a href="#">Trafik Sigortası ile Kasko Arasındaki Temel Farklar</a></h3>
-                            <p>Hangi sigorta sizin aracınızı korur, hangisi karşı tarafı korur? Poliçe seçerken bilmeniz gereken en kritik detaylar.</p>
-                            <a href="#" class="read-more">Devamını Oku <i data-lucide="arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <div class="image-placeholder" style="aspect-ratio: 16/9;"><i data-lucide="home" style="width:40px;height:40px;opacity:0.5;"></i></div>
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-category">Konut Sigortası</span>
-                            <h3><a href="#">DASK Yeterli Mi? Konut Sigortası Neden Önemli?</a></h3>
-                            <p>Zorunlu deprem sigortası (DASK) sadece belirli limitlere kadar koruma sağlar. Eşyalarınız ve diğer riskler için konut sigortasının önemi.</p>
-                            <a href="#" class="read-more">Devamını Oku <i data-lucide="arrow-right"></i></a>
+                        <div class="blog-content" style="padding: 30px;">
+                            <span class="blog-category" style="color: var(--color-secondary); background: rgba(0,212,255,0.1); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; display: inline-block;">Oto Sigortaları</span>
+                            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 15px; letter-spacing: -0.5px;">Kasko Poliçesi Seçerken Nelere Dikkat Edilmeli?</h3>
+                            <p style="color: var(--color-text-muted); margin-bottom: 20px; line-height: 1.6;">Mini onarım, ikame araç ve yetkili servis ağı gibi detayların kasko poliçenizdeki önemi nedir? Doğru poliçeyi seçmenin sırları.</p>
+                            <a href="#" class="read-more" style="color: var(--color-primary); font-weight: 600; display: flex; align-items: center; gap: 5px;">Devamını Oku <i data-lucide="arrow-right"></i></a>
                         </div>
                     </article>
 
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <div class="image-placeholder" style="aspect-ratio: 16/9;"><i data-lucide="heart-pulse" style="width:40px;height:40px;opacity:0.5;"></i></div>
+                    <!-- Blog Kartı 2 -->
+                    <article class="blog-card reveal-up" style="background: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.03);">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" alt="Sağlık" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
                         </div>
-                        <div class="blog-content">
-                            <span class="blog-category">Sağlık Sigortası</span>
-                            <h3><a href="#">Tamamlayıcı Sağlık Sigortası (TSS) Hakkında Her Şey</a></h3>
-                            <p>SGK güvencesiyle özel hastanelerde nasıl fark ödemeden tedavi olabilirsiniz? TSS poliçesi yaptırırken dikkat edilmesi gerekenler.</p>
-                            <a href="#" class="read-more">Devamını Oku <i data-lucide="arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <div class="image-placeholder" style="aspect-ratio: 16/9;"><i data-lucide="file-check-2" style="width:40px;height:40px;opacity:0.5;"></i></div>
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-category">Mevzuat & İpuçları</span>
-                            <h3><a href="#">Poliçe Yenileme Döneminde Dikkat Edilmesi Gerekenler</a></h3>
-                            <p>Sigorta poliçenizin vadesi dolmadan önce prim avantajlarını kaybetmemek ve teminat boşluğu yaşamamak için ipuçları.</p>
-                            <a href="#" class="read-more">Devamını Oku <i data-lucide="arrow-right"></i></a>
+                        <div class="blog-content" style="padding: 30px;">
+                            <span class="blog-category" style="color: var(--color-accent); background: rgba(0,230,118,0.1); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; display: inline-block;">Sağlık Sigortaları</span>
+                            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 15px; letter-spacing: -0.5px;">Tamamlayıcı Sağlık Sigortası Kimler İçin Uygundur?</h3>
+                            <p style="color: var(--color-text-muted); margin-bottom: 20px; line-height: 1.6;">Özel hastanelerde yüksek fark ücretleri ödemekten kurtulmanın en pratik yolu TSS. Bekleme süreleri ve teminatlar hakkında her şey.</p>
+                            <a href="#" class="read-more" style="color: var(--color-primary); font-weight: 600; display: flex; align-items: center; gap: 5px;">Devamını Oku <i data-lucide="arrow-right"></i></a>
                         </div>
                     </article>
 
@@ -126,9 +98,39 @@
         </section>
     </main>
 
-    <!-- (Footer Kısmı Buraya Gelecek - İletişim sayfasındaki ile aynı) -->
-    
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo logo"><span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span></a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Menü</h3>
+                <ul>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hasar-destek.html">Hasar Desteği</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h3>Bize Ulaşın</h3>
+                <ul>
+                    <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>

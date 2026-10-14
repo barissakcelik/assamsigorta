@@ -170,7 +170,13 @@
 @keyframes pulse-dot { 0% { box-shadow: 0 0 0 0 rgba(0,230,118,0.7); } 70% { box-shadow: 0 0 0 10px rgba(0,230,118,0); } 100% { box-shadow: 0 0 0 0 rgba(0,230,118,0); } }
 
 .hero-title { font-size: 3.8rem; letter-spacing: -2px; margin-bottom: 24px; color: var(--color-primary); }
-.gradient-text { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.gradient-text { 
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); 
+    -webkit-background-clip: text; 
+    background-clip: text; /* Sarı uyarıyı çözen satır */
+    -webkit-text-fill-color: transparent; 
+    color: transparent; /* Tam uyumluluk için */
+}
 .hero-desc { font-size: 1.2rem; margin-bottom: 40px; color: var(--color-text-muted); max-width: 500px; }
 
 .hero-action-group { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }

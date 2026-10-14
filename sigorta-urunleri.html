@@ -3,163 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigorta Ürünlerimiz | ASSAM SİGORTA</title>
-    <meta name="description" content="Araç, konut, sağlık ve işyeri sigortalarında tüm ihtiyaçlarınıza uygun çözümler ASSAM Sigorta'da.">
+    <title>Sigorta Çözümlerimiz | ASSAM SİGORTA</title>
+    <meta name="description" content="Araç, konut, sağlık ve kurumsal işletme sigortası ürünlerimizi inceleyin. Size en uygun güvenceyi ASSAM Sigorta'da bulun.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Bu sayfaya özel Grid yapılandırması */
+        .all-products-grid {
+            display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 40px;
+        }
+        @media (min-width: 768px) { .all-products-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .all-products-grid { grid-template-columns: repeat(3, 1fr); } }
+        
+        .product-grid-card {
+            position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 400px;
+            transition: var(--transition-slow); border: 1px solid rgba(0,0,0,0.05);
+        }
+        .product-grid-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .product-grid-card img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;
+        }
+        .product-grid-card:hover img { transform: scale(1.08); }
+        
+        .pg-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(10,25,47,0.95) 0%, rgba(10,25,47,0.3) 60%, transparent 100%);
+        }
+        
+        .pg-content {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 35px 30px; color: #fff; z-index: 2;
+        }
+        .pg-icon {
+            width: 50px; height: 50px; background: rgba(255,255,255,0.15); backdrop-filter: blur(5px);
+            border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.3); transition: var(--transition-fast);
+        }
+        .product-grid-card:hover .pg-icon { background: var(--color-secondary); color: var(--color-primary); border-color: var(--color-secondary); }
+        .pg-content h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
+        .pg-content p { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.5; }
+        .pg-link { color: var(--color-secondary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+        .pg-link:hover { color: #fff; gap: 12px; }
+    </style>
 </head>
-<body>
+<body style="background-color: var(--color-bg-light);">
 
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
-
+    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="sigorta-urunleri.html" class="active">Sigorta Ürünleri</a></li>
-                    <li><a href="hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="rehber.html">Sigorta Rehberi</a></li>
+                    <li class="dropdown">
+                        <a href="sigorta-urunleri.html" class="active">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
+                            <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
+                            <li><a href="sigorta/dask.html">DASK (Deprem Sigortası)</a></li>
+                            <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
+                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
+                            <li><a href="sigorta/isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="hasar-destek.html">Hasar Anında</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü"><i data-lucide="menu"></i></button>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <a href="teklif-al.html" class="btn btn-glow">Teklif Al</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Sigorta Ürünlerimiz</h1>
-                <p>Bireysel ve kurumsal ihtiyaçlarınıza yönelik tüm güvence seçenekleri.</p>
+        <!-- İç Sayfa Başlığı -->
+        <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); padding-bottom: 60px;">
+            <div class="container reveal-up">
+                <h1 style="color: #fff; font-size: 3.5rem; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 15px;">Tüm Çözümlerimiz</h1>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem; max-width: 600px; margin: 0 auto;">İhtiyaçlarınıza özel tasarlanmış, hayatın her alanını kapsayan yenilikçi sigorta paketlerini inceleyin.</p>
             </div>
         </section>
 
-        <!-- Kategori 1: Araç Sigortaları -->
-        <section class="section" id="arac">
+        <!-- Grid Ürün Listesi -->
+        <section class="section" style="padding-top: 60px; padding-bottom: 100px;">
             <div class="container">
-                <div class="category-header">
-                    <div class="icon-box"><i data-lucide="car"></i></div>
-                    <h2>Araç Sigortaları</h2>
-                </div>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <h3>Zorunlu Trafik Sigortası</h3>
-                        <p>Karayollarında üçüncü şahıslara verebileceğiniz zararları güvence altına alan zorunlu poliçedir.</p>
-                        <a href="sigorta/trafik-sigortasi.html" class="card-link">Detayları İncele &rarr;</a>
+                <div class="all-products-grid">
+                    
+                    <!-- Kart 1 -->
+                    <div class="product-grid-card reveal-up">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Trafik Sigortası">
+                        <div class="pg-overlay"></div>
+                        <div class="pg-content">
+                            <div class="pg-icon"><i data-lucide="car"></i></div>
+                            <h3>Trafik Sigortası</h3>
+                            <p>Olası kazalarda karşı tarafa verebileceğiniz zararlara karşı yasal güvenceniz.</p>
+                            <a href="sigorta/trafik-sigortasi.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
+                        </div>
                     </div>
-                    <div class="product-card">
-                        <h3>Kasko Sigortası</h3>
-                        <p>Kendi aracınızda meydana gelebilecek kaza, hırsızlık ve yanma gibi risklere karşı geniş güvence sağlar.</p>
-                        <a href="sigorta/kasko.html" class="card-link">Detayları İncele &rarr;</a>
+
+                    <!-- Kart 2 -->
+                    <div class="product-grid-card reveal-up" style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeefa?auto=format&fit=crop&w=800&q=80" alt="Kasko">
+                        <div class="pg-overlay"></div>
+                        <div class="pg-content">
+                            <div class="pg-icon"><i data-lucide="shield"></i></div>
+                            <h3>Kasko Sigortası</h3>
+                            <p>Kendi aracınızda meydana gelebilecek hasarlara karşı en kapsamlı güvence.</p>
+                            <a href="sigorta/kasko.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
+                        </div>
                     </div>
-                    <div class="product-card">
-                        <h3>İMM (İhtiyari Mali Mesuliyet)</h3>
-                        <p>Trafik sigortası limitlerinin yetersiz kaldığı durumlarda ekstra sorumluluk güvencesi sunar.</p>
-                        <a href="teklif-al.html" class="card-link">Teklif Al &rarr;</a>
+
+                    <!-- Kart 3 -->
+                    <div class="product-grid-card reveal-up" style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Konut">
+                        <div class="pg-overlay"></div>
+                        <div class="pg-content">
+                            <div class="pg-icon"><i data-lucide="home"></i></div>
+                            <h3>Konut Sigortası</h3>
+                            <p>Evinizi ve eşyalarınızı hırsızlık, yangın ve su baskını gibi tehlikelere karşı koruyun.</p>
+                            <a href="sigorta/konut-sigortasi.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
+                        </div>
                     </div>
+
+                    <!-- Kart 4 -->
+                    <div class="product-grid-card reveal-up">
+                        <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?auto=format&fit=crop&w=800&q=80" alt="DASK">
+                        <div class="pg-overlay"></div>
+                        <div class="pg-content">
+                            <div class="pg-icon"><i data-lucide="activity"></i></div>
+                            <h3>DASK</h3>
+                            <p>Depremin binanızda yaratabileceği maddi zararlara karşı zorunlu devlet güvencesi.</p>
+                            <a href="sigorta/dask.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Kart 5 -->
+                    <div class="product-grid-card reveal-up" style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" alt="Sağlık">
+                        <div class="pg-overlay"></div>
+                        <div class="pg-content">
+                            <div class="pg-icon"><i data-lucide="heart-pulse"></i></div>
+                            <h3>Tamamlayıcı Sağlık</h3>
+                            <p>Özel hastanelerde SGK fark ücreti ödemeden, VIP kalitesinde tedavi imkanı.</p>
+                            <a href="sigorta/tamamlayici-saglik.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Kart 6 -->
+                    <div class="product-grid-card reveal-up" style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="İşyeri">
+                        <div class="pg-overlay"></div>
+                        <div class="pg-content">
+                            <div class="pg-icon"><i data-lucide="briefcase"></i></div>
+                            <h3>İşyeri Paket Sigortası</h3>
+                            <p>İşletmenizin geleceğini, yatırımlarınızı ve çalışanlarınızı risklere karşı koruyun.</p>
+                            <a href="sigorta/isyeri-sigortasi.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
-
-        <!-- Kategori 2: Konut ve Mülk -->
-        <section class="section bg-light" id="konut">
-            <div class="container">
-                <div class="category-header">
-                    <div class="icon-box"><i data-lucide="home"></i></div>
-                    <h2>Konut ve Mülk Sigortaları</h2>
-                </div>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <h3>DASK (Zorunlu Deprem Sigortası)</h3>
-                        <p>Evinizi deprem ve deprem sonucu meydana gelen yangın, infilak gibi risklere karşı korur.</p>
-                        <a href="sigorta/dask.html" class="card-link">Detayları İncele &rarr;</a>
-                    </div>
-                    <div class="product-card">
-                        <h3>Konut Sigortası</h3>
-                        <p>Evinizi ve eşyalarınızı hırsızlık, su baskını, yangın ve diğer risklere karşı geniş kapsamlı güvenceye alır.</p>
-                        <a href="sigorta/konut-sigortasi.html" class="card-link">Detayları İncele &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Kategori 3: Sağlık Sigortaları -->
-        <section class="section" id="saglik">
-            <div class="container">
-                <div class="category-header">
-                    <div class="icon-box"><i data-lucide="heart-pulse"></i></div>
-                    <h2>Sağlık Sigortaları</h2>
-                </div>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <h3>Tamamlayıcı Sağlık Sigortası (TSS)</h3>
-                        <p>SGK anlaşmalı özel hastanelerde fark ücreti ödemeden kaliteli sağlık hizmeti almanızı sağlar.</p>
-                        <a href="sigorta/tamamlayici-saglik.html" class="card-link">Detayları İncele &rarr;</a>
-                    </div>
-                    <div class="product-card">
-                        <h3>Özel Sağlık Sigortası</h3>
-                        <p>En geniş kapsamlı sağlık güvencesiyle dilediğiniz özel sağlık kurumunda hizmet alma özgürlüğü sunar.</p>
-                        <a href="teklif-al.html" class="card-link">Teklif Al &rarr;</a>
-                    </div>
-                    <div class="product-card">
-                        <h3>Seyahat Sağlık Sigortası</h3>
-                        <p>Yurt içi ve yurt dışı seyahatlerinizde başınıza gelebilecek acil sağlık problemlerine karşı korur.</p>
-                        <a href="teklif-al.html" class="card-link">Teklif Al &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Kategori 4: Kurumsal Sigortalar -->
-        <section class="section bg-light" id="kurumsal">
-            <div class="container">
-                <div class="category-header">
-                    <div class="icon-box"><i data-lucide="briefcase"></i></div>
-                    <h2>Kurumsal Çözümler</h2>
-                </div>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <h3>İşyeri Paket Sigortası</h3>
-                        <p>İşletmenizi, mallarınızı ve demirbaşlarınızı yangın, hırsızlık, doğal afet gibi tehlikelere karşı korur.</p>
-                        <a href="sigorta/isyeri-sigortasi.html" class="card-link">Detayları İncele &rarr;</a>
-                    </div>
-                    <div class="product-card">
-                        <h3>Mesleki Sorumluluk Sigortaları</h3>
-                        <p>Mesleki faaliyetleriniz sırasında üçüncü şahıslara verebileceğiniz zararlara karşı hukuki koruma sağlar.</p>
-                        <a href="teklif-al.html" class="card-link">Teklif Al &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- (Footer Kısmı Buraya Gelecek - İletişim sayfasındaki ile aynı) -->
-    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo logo"><span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span></a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Menü</h3>
+                <ul>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hasar-destek.html">Hasar Desteği</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h3>Bize Ulaşın</h3>
+                <ul>
+                    <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>

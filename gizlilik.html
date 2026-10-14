@@ -8,113 +8,116 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Ana dizinde olduğumuz için assets/css/... kullanılır -->
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
+<body style="background-color: var(--color-bg-light);">
 
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="sigorta-urunleri.html">Sigorta Ürünleri</a></li>
+                    <li class="dropdown">
+                        <a href="sigorta-urunleri.html">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
+                            <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
+                            <li><a href="sigorta/dask.html">DASK</a></li>
+                            <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
+                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
+                            <li><a href="sigorta/isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="hasar-destek.html">Hasar Anında</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <a href="teklif-al.html" class="btn btn-glow">Teklif Al</a>
                 <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Gizlilik Politikası</h1>
-                <p>Verilerinizin güvenliği ve gizliliği bizim için en yüksek önceliktir.</p>
+        <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); padding-bottom: 60px;">
+            <div class="container reveal-up">
+                <h1 style="color: #fff; font-size: 3rem; letter-spacing: -1px; font-weight: 800; margin-bottom: 15px;">Gizlilik Politikası</h1>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem;">Verilerinizin güvenliği ve gizliliği bizim için en yüksek önceliktir.</p>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container" style="max-width: 900px;">
-                <div class="legal-content">
+        <section class="section" style="padding-top: 60px;">
+            <div class="container reveal-up">
+                <div style="background: #fff; max-width: 900px; margin: 0 auto; padding: 50px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.03);">
                     
-                    <h2 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-heading);">1. Giriş</h2>
-                    <p style="margin-bottom: 25px; line-height: 1.7;">ASSAM SİGORTA ARACILIK HİZMETLERİ LTD. ŞTİ. olarak, "assamsigorta.com.tr" web sitemizi ziyaret eden kullanıcılarımızın bilgi güvenliğine büyük önem veriyoruz. Bu Gizlilik Politikası, web sitemizi kullanımınız sırasında hangi kişisel bilgilerin toplandığını, bunların nasıl kullanıldığını ve nasıl korunduğunu açıklamaktadır.</p>
-                    
-                    <h2 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-heading);">2. Toplanan Bilgiler</h2>
-                    <p style="margin-bottom: 15px; line-height: 1.7;">Web sitemiz üzerinden sigorta teklifi almak veya bizimle iletişime geçmek istediğinizde, sizden aşağıdaki bilgileri talep edebiliriz:</p>
-                    <ul style="list-style: disc; margin-left: 20px; margin-bottom: 25px; line-height: 1.7;">
-                        <li>Ad ve Soyad</li>
-                        <li>İletişim Bilgileri (Telefon numarası, e-posta adresi)</li>
-                        <li>Sigorta türüne bağlı olarak talep edilen temel bilgiler</li>
-                    </ul>
+                    <div style="margin-bottom: 40px;">
+                        <h2 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 15px; letter-spacing: -0.5px;">1. Giriş</h2>
+                        <p style="color: var(--color-text-muted); line-height: 1.7;">ASSAM SİGORTA ARACILIK HİZMETLERİ LTD. ŞTİ. olarak, "assamsigorta.com.tr" web sitemizi ziyaret eden kullanıcılarımızın bilgi güvenliğine büyük önem veriyoruz. Bu Gizlilik Politikası, web sitemizi kullanımınız sırasında hangi kişisel bilgilerin toplandığını, bunların nasıl kullanıldığını ve nasıl korunduğunu açıklamaktadır.</p>
+                    </div>
 
-                    <h2 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-heading);">3. Bilgilerin Kullanımı</h2>
-                    <p style="margin-bottom: 25px; line-height: 1.7;">Bizimle paylaştığınız bilgiler; yalnızca tarafınıza doğru sigorta teklifinin sunulması, taleplerinizin yanıtlanması, poliçe yenileme süreçlerinizde sizinle iletişime geçilmesi ve hizmet kalitemizin artırılması amaçlarıyla kullanılır. Bilgileriniz, açık rızanız veya yasal bir zorunluluk olmaksızın pazarlama amacıyla üçüncü parti şirketlerle (acentelik faaliyetleri kapsamındaki sigorta şirketleri hariç) paylaşılmaz.</p>
+                    <div style="margin-bottom: 40px;">
+                        <h2 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 15px; letter-spacing: -0.5px;">2. Toplanan Bilgiler ve Kullanımı</h2>
+                        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 15px;">Web sitemiz üzerinden sigorta teklifi almak veya bizimle iletişime geçmek istediğinizde talep ettiğimiz bilgiler (Ad, Soyad, Telefon vb.); yalnızca tarafınıza doğru sigorta teklifinin sunulması ve taleplerinizin yanıtlanması amacıyla kullanılır.</p>
+                        <p style="color: var(--color-text-muted); line-height: 1.7;">Bilgileriniz, açık rızanız veya yasal bir zorunluluk olmaksızın pazarlama amacıyla üçüncü parti şirketlerle (acentelik faaliyetleri kapsamındaki sigorta şirketleri hariç) kesinlikle paylaşılmaz.</p>
+                    </div>
 
-                    <h2 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-heading);">4. Veri Güvenliği</h2>
-                    <p style="margin-bottom: 25px; line-height: 1.7;">ASSAM SİGORTA, toplanan bilgilerin yetkisiz erişime, değiştirilmeye veya ifşa edilmesine karşı korunması için gerekli fiziksel, elektronik ve idari güvenlik önlemlerini almaktadır. Sitemiz üzerinden iletilen veriler SSL teknolojisi ile şifrelenerek korunur.</p>
-
-                    <h2 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-heading);">5. Diğer Sitelere Bağlantılar</h2>
-                    <p style="margin-bottom: 25px; line-height: 1.7;">Web sitemiz, üçüncü taraf sitelere bağlantılar (linkler) içerebilir. Bu sitelerin gizlilik uygulamaları ve içeriklerinden şirketimiz sorumlu değildir. Başka bir siteye yönlendirildiğinizde o sitenin gizlilik politikasını okumanızı tavsiye ederiz.</p>
-
-                    <h2 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-heading);">6. İletişim</h2>
-                    <p style="margin-bottom: 25px; line-height: 1.7;">Gizlilik politikamız ile ilgili soru veya görüşlerinizi iletmek için <strong>info@assamsigorta.com.tr</strong> adresine e-posta gönderebilir veya iletişim bölümündeki numaralarımızdan bize ulaşabilirsiniz.</p>
+                    <div style="margin-bottom: 40px;">
+                        <h2 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 15px; letter-spacing: -0.5px;">3. Veri Güvenliği</h2>
+                        <p style="color: var(--color-text-muted); line-height: 1.7;">ASSAM SİGORTA, toplanan bilgilerin yetkisiz erişime, değiştirilmeye veya ifşa edilmesine karşı korunması için gerekli fiziksel, elektronik ve idari güvenlik önlemlerini almaktadır. Sitemiz üzerinden iletilen veriler modern şifreleme yöntemleriyle korunur.</p>
+                    </div>
 
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Standart Footer -->
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-col brand-col">
-                <a href="index.html" class="footer-logo logo">ASSAM<span>SİGORTA</span></a>
-                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı, doğru bilgilendirme ve ihtiyaca uygun danışmanlık hizmeti sunuyoruz.</p>
+                <a href="index.html" class="footer-logo logo"><span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span></a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Menü</h3>
+                <ul><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="hasar-destek.html">Hasar Desteği</a></li><li><a href="iletisim.html">İletişim</a></li></ul>
             </div>
             <div class="footer-col contact-col">
-                <h3>İletişim</h3>
+                <h3>Bize Ulaşın</h3>
                 <ul>
                     <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
-                    <li><a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a></li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
                 <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
-                <div class="legal-links">
-                    <a href="kvkk.html">KVKK Aydınlatma Metni</a>
-                    <a href="gizlilik.html" style="color: #fff;">Gizlilik Politikası</a>
-                    <a href="cerez.html">Çerez Politikası</a>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="cerez.html" style="color: rgba(255,255,255,0.5);">Çerez Politikası</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>
