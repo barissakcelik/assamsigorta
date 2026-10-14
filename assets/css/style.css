@@ -62,7 +62,7 @@
 /* Yeni İri Logo Ayarları */
 .logo { display: flex; align-items: center; }
 .logo-img {
-    max-height: 100px; /* Logo çok daha büyük */
+    max-height: 135px; /* Logo çok daha büyük */
     width: auto;
     object-fit: contain;
     transition: var(--transition-fast);
