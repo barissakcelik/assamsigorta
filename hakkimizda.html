@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımızda | ASSAM SİGORTA</title>
-    <meta name="description" content="2012'den bu yana Samsun İlkadım'da faaliyet gösteren ASSAM SİGORTA'nın kuruluş hikayesi, misyonu ve sigortacılık değerleri.">
+    <meta name="description" content="2012'den bu yana Samsun İlkadım'da faaliyet gösteren ASSAM SİGORTA'nın kuruluş hikayesi, misyonu ve yenilikçi sigortacılık değerleri.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="assets/css/variables.css">
@@ -17,49 +17,43 @@
 </head>
 <body>
 
-    <!-- Üst Bilgi Barı -->
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigasyon -->
+    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
             
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html" class="active">Hakkımızda</a></li>
                     <li class="dropdown">
-                        <a href="sigorta-urunleri.html">Sigorta Ürünleri <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                        <a href="sigorta-urunleri.html">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
                             <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
-                            <li><a href="sigorta/dask.html">DASK</a></li>
+                            <li><a href="sigorta/dask.html">DASK (Deprem Sigortası)</a></li>
                             <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
-                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık Sigortası</a></li>
+                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
                             <li><a href="sigorta/isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
-                            <li><a href="sigorta-urunleri.html" class="view-all">Tüm Ürünleri İncele &rarr;</a></li>
                         </ul>
                     </li>
-                    <li><a href="hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="rehber.html">Sigorta Rehberi</a></li>
+                    <li><a href="hasar-destek.html">Hasar Anında</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü"><i data-lucide="menu"></i></button>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <a href="teklif-al.html" class="btn btn-glow">Teklif Al</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
@@ -68,51 +62,115 @@
         <!-- İç Sayfa Başlığı -->
         <section class="page-header">
             <div class="container">
-                <h1>Hakkımızda</h1>
-                <p>Güven Temelinde Bir Sigortacılık Anlayışı</p>
+                <div class="reveal-up">
+                    <h1 style="color: #fff; font-size: 3.5rem; letter-spacing: -1.5px; font-weight: 800;">Güven Temelinde Bir<br>Sigortacılık Anlayışı</h1>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.25rem;">2012'den beri Samsun'dan Türkiye'ye değer ve güvence üretiyoruz.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Kurumsal Hikaye -->
+        <!-- Kurumsal Hikaye (Asimetrik Görsel Düzeni) -->
         <section class="section">
             <div class="container about-inner">
-                <div class="about-text">
-                    <h2>2012'den Bugüne Güven ve İstikrar</h2>
-                    <p>ASSAM SİGORTA ARACILIK HİZMETLERİ LTD. ŞTİ. olarak, 26 Nisan 2012 tarihinden bu yana Samsun İlkadım'daki ofisimizde kişi ve kurumlara profesyonel sigorta aracılık ve danışmanlık hizmeti sunuyoruz.</p>
-                    <p>Amacımız sadece bir poliçe üretmek değil; araç, konut, sağlık ve işyeri gibi yaşamın temel güvence alanlarında müşterilerimizin gerçek risklerini analiz ederek onlara en doğru teminatları en şeffaf şekilde sunmaktır.</p>
-                    <p>Sigortacılığın asıl değerinin poliçe satıldığında değil, hasar anında ortaya çıktığının bilinciyle hareket ediyoruz. Bu nedenle poliçe yenileme süreçlerinden olası bir hasar ihbarına kadar her adımda, ulaşılabilir bir danışman olarak müşterilerimizin yanında yer alıyoruz.</p>
+                <div class="about-text reveal-left">
+                    <div class="hero-badge" style="border-color: rgba(0,0,0,0.1); background: #fff;">Biz Kimiz?</div>
+                    <h2>Bugününüzü de, Yarınınızı da Güvenceye Alıyoruz.</h2>
+                    <p>ASSAM SİGORTA ARACILIK HİZMETLERİ LTD. ŞTİ. olarak, 26 Nisan 2012 tarihinden bu yana Samsun İlkadım'daki merkez ofisimizde kişi ve kurumlara profesyonel sigorta aracılık ve danışmanlık hizmeti sunuyoruz.</p>
+                    <p>Amacımız sadece bir poliçe üretmek veya satış yapmak değildir. Bizler, araç, konut, sağlık ve işyeri gibi yaşamın temel güvence alanlarında müşterilerimizin gerçek risklerini analiz ederek onlara en doğru teminatları en şeffaf şekilde sunmayı görev edindik.</p>
+                    <p>Sigortacılığın asıl değerinin hasar anında ortaya çıktığının bilincindeyiz. Bu nedenle poliçe yenileme süreçlerinden olası bir hasar ihbarına kadar her adımda, ulaşılabilir bir yol arkadaşı olarak yanınızdayız.</p>
+                    
+                    <div style="margin-top: 30px; display: flex; gap: 15px;">
+                        <a href="iletisim.html" class="btn btn-primary">Ofisimizi Ziyaret Edin</a>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder vertical">
-                        <i data-lucide="building-2" class="hero-icon"></i>
+                
+                <div class="hero-visual reveal-right" style="height: auto;">
+                    <div class="glass-card-main" style="width: 100%; height: 500px; transform: none; box-shadow: var(--shadow-lg);">
+                        <!-- Hikayeyi destekleyen kaliteli bir ofis/çalışma görseli -->
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="ASSAM Sigorta Ofis" class="main-img">
+                        
+                        <!-- Floating Element -->
+                        <div class="floating-element el-1" style="left: -20px; top: 20px;">
+                            <div class="icon-wrap"><i data-lucide="award"></i></div>
+                            <div>
+                                <small>Resmî Kayıt</small>
+                                <strong>Levha: T12411-3BMM</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Değerlerimiz -->
-        <section class="section bg-light">
+        <!-- Dinamik İstatistik Bölümü (Hakkımızda Sayfasına Özel Renklerde) -->
+        <section class="section stats-section reveal-up" style="background: transparent; padding-top: 0; padding-bottom: 60px; margin-top: 0;">
             <div class="container">
-                <div class="section-header">
-                    <h2>Kurumsal Değerlerimiz</h2>
-                    <p>Hizmet anlayışımızı şekillendiren temel ilkeler.</p>
+                <div class="stats-grid" style="background: var(--color-primary); color: #fff; border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-card">
+                        <h3 class="stat-number" style="color: var(--color-secondary);"><span class="counter-value" data-target="14">0</span>+</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Yıllık Deneyim</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" style="color: var(--color-secondary);"><span class="counter-value" data-target="24">0</span></h3>
+                        <p style="color: rgba(255,255,255,0.7);">Sigorta Şirketi</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" style="color: var(--color-secondary);"><span class="counter-value" data-target="1000">0</span>+</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Aktif Poliçe</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" style="color: var(--color-secondary);">%<span class="counter-value" data-target="100">0</span></h3>
+                        <p style="color: rgba(255,255,255,0.7);">Şeffaflık</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kurumsal Değerlerimiz (Bento Tarzı Grid) -->
+        <section class="section bg-light reveal-up">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Değerlerimiz</h2>
+                    <p>Hizmet anlayışımızı şekillendiren temel ilkeler ve çalışma prensiplerimiz.</p>
                 </div>
                 
                 <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon"><i data-lucide="shield-check"></i></div>
-                        <h3>Şeffaflık</h3>
-                        <p>Poliçe kapsamı, teminat dışı kalan durumlar ve primlendirme hakkında müşterilerimizi eksiksiz, anlaşılır ve doğru biçimde bilgilendiririz.</p>
+                    <div class="value-card" style="text-align: left; padding: 40px;">
+                        <div class="value-icon" style="margin: 0 0 20px 0; background: rgba(0, 212, 255, 0.1); color: var(--color-secondary);"><i data-lucide="shield-check"></i></div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Şeffaflık</h3>
+                        <p style="color: var(--color-text-muted);">Poliçe kapsamı, teminat dışı kalan durumlar ve primlendirme hakkında müşterilerimizi eksiksiz, anlaşılır ve tamamen doğru biçimde bilgilendiririz.</p>
                     </div>
-                    <div class="value-card">
-                        <div class="value-icon"><i data-lucide="users"></i></div>
-                        <h3>Müşteri Odaklılık</h3>
-                        <p>Hazır paketler yerine, bireylerin ve işletmelerin gerçek risklerine uygun, kişiselleştirilmiş sigorta çözümleri üretiriz.</p>
+                    
+                    <div class="value-card" style="text-align: left; padding: 40px;">
+                        <div class="value-icon" style="margin: 0 0 20px 0; background: rgba(0, 230, 118, 0.1); color: var(--color-accent);"><i data-lucide="target"></i></div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Müşteri Odaklılık</h3>
+                        <p style="color: var(--color-text-muted);">Herkese uyan standart paketler yerine, bireylerin ve işletmelerin gerçek risklerine uygun, tamamen kişiselleştirilmiş sigorta çözümleri üretiriz.</p>
                     </div>
-                    <div class="value-card">
-                        <div class="value-icon"><i data-lucide="headphones"></i></div>
-                        <h3>Ulaşılabilirlik</h3>
-                        <p>İhtiyaç anında, kafa karışıklığı yaratmadan doğrudan acentemize ulaşabileceğiniz, hızlı ve çözüm odaklı bir iletişim kanalı sunarız.</p>
+                    
+                    <div class="value-card" style="text-align: left; padding: 40px;">
+                        <div class="value-icon" style="margin: 0 0 20px 0; background: rgba(10, 25, 47, 0.1); color: var(--color-primary);"><i data-lucide="headphones"></i></div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Ulaşılabilirlik</h3>
+                        <p style="color: var(--color-text-muted);">İhtiyaç anında, kafa karışıklığı yaratmadan doğrudan acentemize ulaşabileceğiniz, hızlı ve çözüm odaklı iletişim kanalları sunarız.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium CTA (Hakkımızda sayfasına özel) -->
+        <section class="section cta-premium reveal-up">
+            <div class="container">
+                <div class="cta-box" style="background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);">
+                    <div class="cta-content">
+                        <h2 style="font-size: 2.2rem;">Sizi Dinlemeye Hazırız</h2>
+                        <p>Sorularınız, poliçe yenileme işlemleriniz veya yeni bir teklif almak için bizimle iletişime geçin. Ekibimiz en kısa sürede size dönecektir.</p>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="iletisim.html" class="btn btn-glow">Bize Ulaşın</a>
+                            <a href="teklif-al.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #fff;">Teklif Al</a>
+                        </div>
+                    </div>
+                    <div class="cta-image">
+                        <!-- Danışmanlık ve iletişim hissi veren bir görsel -->
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="İletişim">
                     </div>
                 </div>
             </div>
@@ -124,62 +182,41 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-col brand-col">
-                <a href="index.html" class="footer-logo logo">ASSAM<span>SİGORTA</span></a>
-                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı, doğru bilgilendirme ve ihtiyaca uygun danışmanlık hizmeti sunuyoruz.</p>
-                <div class="footer-info">
-                    <span><strong>Levha No:</strong> T12411-3BMM</span>
-                    <span><strong>Kuruluş:</strong> 26.04.2012</span>
-                </div>
+                <a href="index.html" class="footer-logo logo">
+                    <span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span>
+                </a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
             </div>
             
             <div class="footer-col">
-                <h3>Hızlı Bağlantılar</h3>
+                <h3>Menü</h3>
                 <ul>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="rehber.html">Sigorta Rehberi</a></li>
-                    <li><a href="teklif-al.html">Teklif Al</a></li>
+                    <li><a href="hasar-destek.html">Hasar Desteği</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </div>
 
-            <div class="footer-col">
-                <h3>Sigorta Ürünleri</h3>
-                <ul>
-                    <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
-                    <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
-                    <li><a href="sigorta/dask.html">DASK</a></li>
-                    <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
-                    <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık Sigortası</a></li>
-                </ul>
-            </div>
-
             <div class="footer-col contact-col">
-                <h3>İletişim</h3>
+                <h3>Bize Ulaşın</h3>
                 <ul>
-                    <li><i data-lucide="map-pin"></i> Bahçelievler Mah. 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
-                    <li><a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a></li>
-                    <li><a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a></li>
+                    <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
+                    <li><i data-lucide="mail"></i> info@assamsigorta.com.tr</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
-                <p>&copy; 2026 ASSAM SİGORTA ARACILIK HİZMETLERİ LTD. ŞTİ. Tüm hakları saklıdır.</p>
-                <div class="legal-links">
-                    <a href="kvkk.html">KVKK Aydınlatma Metni</a>
-                    <a href="gizlilik.html">Gizlilik Politikası</a>
-                    <a href="cerez.html">Çerez Politikası</a>
+                <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/905337049879?text=Merhaba,%20ASSAM%20SİGORTA%20üzerinden%20sigorta%20teklifi%20almak%20istiyorum.%20Bilgi%20alabilir%20miyim?" target="_blank" class="floating-whatsapp" aria-label="WhatsApp ile iletişime geçin">
-        <i data-lucide="message-circle"></i>
-    </a>
-
     <script src="assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>

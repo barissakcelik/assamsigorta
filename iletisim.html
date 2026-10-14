@@ -4,126 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim | ASSAM SİGORTA</title>
-    <meta name="description" content="Samsun İlkadım'daki ofisimizi ziyaret edin veya +90 533 704 98 79 numaralı telefondan uzman sigorta danışmanlarımıza ulaşın.">
+    <meta name="description" content="Samsun İlkadım'daki ofisimizi ziyaret edin veya uzman sigorta danışmanlarımıza anında dijital kanallardan ulaşın.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* İletişim sayfasına özel asimetrik harita düzeni */
+        .contact-page-wrapper {
+            position: relative;
+            background-color: var(--color-bg-light);
+            padding: 80px 0 120px 0;
+            overflow: hidden;
+        }
+        
+        .contact-grid-modern {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        @media (min-width: 992px) {
+            .contact-grid-modern {
+                grid-template-columns: 350px 1fr; /* Sol taraf ince bilgi kartı, sağ taraf dev harita */
+                align-items: stretch;
+            }
+        }
+
+        .contact-info-panel {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .info-block {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .info-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--color-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-content strong {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--color-text-dark);
+            margin-bottom: 5px;
+        }
+
+        .info-content p, .info-content a {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            transition: var(--transition-fast);
+        }
+
+        .info-content a:hover {
+            color: var(--color-secondary);
+        }
+
+        .map-wrapper-modern {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            min-height: 400px;
+            z-index: 1;
+        }
+        
+        @media (min-width: 992px) {
+            .map-wrapper-modern {
+                /* Masaüstünde haritayı sola doğru biraz kaydırıp panelin altına girmesini sağlıyoruz (Overlap effect) */
+                margin-left: -50px; 
+            }
+        }
+
+        .map-wrapper-modern iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            border: none;
+            filter: grayscale(20%) contrast(1.1); /* Haritayı sitenin kurumsal renklerine uyumlu hale getiren hafif filtre */
+        }
+    </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
-
+    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
+            
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
                     <li class="dropdown">
-                        <a href="sigorta-urunleri.html">Sigorta Ürünleri <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                        <a href="sigorta-urunleri.html">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
                             <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
-                            <li><a href="sigorta/dask.html">DASK</a></li>
+                            <li><a href="sigorta/dask.html">DASK (Deprem Sigortası)</a></li>
                             <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
-                            <li><a href="sigorta-urunleri.html" class="view-all">Tüm Ürünleri İncele &rarr;</a></li>
+                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
+                            <li><a href="sigorta/isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
                         </ul>
                     </li>
-                    <li><a href="hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="rehber.html">Sigorta Rehberi</a></li>
+                    <li><a href="hasar-destek.html">Hasar Anında</a></li>
                     <li><a href="iletisim.html" class="active">İletişim</a></li>
                 </ul>
             </nav>
+
             <div class="header-actions">
-                <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü"><i data-lucide="menu"></i></button>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <a href="teklif-al.html" class="btn btn-glow">Teklif Al</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>İletişim</h1>
-                <p>Sorularınız ve teklif talepleriniz için bize doğrudan ulaşabilirsiniz.</p>
+    <main class="contact-page-wrapper">
+        
+        <!-- Sayfa Başlığı -->
+        <div class="container reveal-up" style="position: relative; z-index: 3;">
+            <div style="max-width: 600px;">
+                <div class="hero-badge" style="background: rgba(0, 212, 255, 0.1); color: var(--color-secondary); border: none; margin-bottom: 15px;">Bize Ulaşın</div>
+                <h1 style="font-size: 3.5rem; letter-spacing: -1.5px; color: var(--color-primary); margin-bottom: 20px; line-height: 1.1;">Sizi Dinlemeye<br>Hazırız.</h1>
+                <p style="font-size: 1.15rem; color: var(--color-text-muted);">Samsun'daki merkez ofisimizi ziyaret edin veya dijital kanallarımızdan saniyeler içinde danışmanlarımıza bağlanın.</p>
             </div>
-        </section>
+        </div>
 
-        <section class="section bg-light">
-            <div class="container contact-layout">
-                <!-- İletişim Bilgileri -->
-                <div class="contact-info-wrapper">
-                    <h2>Acente İletişim Bilgilerimiz</h2>
-                    <p>ASSAM SİGORTA olarak her türlü soru, görüş ve teklif talebiniz için iletişime açığız. Samsun'daki ofisimizi ziyaret edebilir veya dijital kanallarımızdan bize ulaşabilirsiniz.</p>
-                    
-                    <ul class="contact-info-list">
-                        <li>
-                            <div class="icon-box"><i data-lucide="map-pin"></i></div>
-                            <div class="info-content">
-                                <strong>Adres</strong>
-                                <span>Bahçelievler Mahallesi, 100. Yıl Bulvarı<br>No: 263/4, İlkadım / Samsun</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-box"><i data-lucide="phone"></i></div>
-                            <div class="info-content">
-                                <strong>Telefon</strong>
-                                <a href="tel:+905337049879">+90 533 704 98 79</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-box"><i data-lucide="mail"></i></div>
-                            <div class="info-content">
-                                <strong>E-posta</strong>
-                                <a href="mailto:info@assamsigorta.com.tr">info@assamsigorta.com.tr</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-box"><i data-lucide="clock"></i></div>
-                            <div class="info-content">
-                                <strong>Çalışma Saatleri</strong>
-                                <span>Pazartesi - Cuma: 09:00 - 18:00<br>Cumartesi: 09:00 - 13:00</span>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/905337049879" target="_blank" class="btn btn-primary" style="background-color: #25D366;"><i data-lucide="message-circle" style="margin-right: 8px;"></i> WhatsApp'tan Yazın</a>
-                        <a href="teklif-al.html" class="btn btn-outline">Teklif Formu Doldur</a>
+        <section class="container contact-grid-modern reveal-up">
+            
+            <!-- Sol: Yüzen İletişim Bilgi Paneli -->
+            <div class="contact-info-panel">
+                
+                <div class="info-block">
+                    <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                    <div class="info-content">
+                        <strong>Genel Müdürlük</strong>
+                        <p>Bahçelievler Mahallesi,<br>100. Yıl Bulvarı No: 263/4<br>İlkadım / Samsun</p>
                     </div>
                 </div>
 
-                <!-- Harita -->
-                <div class="map-container">
-                    <!-- Gerçek Google Maps yerleştirmesi (İlkadım 100. Yıl Bulvarı genel görünüm koordinatları, tam lokasyon güncellenebilir) -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11986.94589252327!2d36.3218567!3d41.2820358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x408877bc954f0a0d%3A0x6b6a655cd29a435!2s%C4%B0lkad%C4%B1m%2C%20Samsun!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="info-block">
+                    <div class="info-icon" style="background: rgba(0, 230, 118, 0.1); color: var(--color-accent);"><i data-lucide="phone"></i></div>
+                    <div class="info-content">
+                        <strong>Telefon & Destek</strong>
+                        <a href="tel:+905337049879" style="display: block; font-weight: 600; color: var(--color-text-dark); margin-bottom: 5px;">+90 533 704 98 79</a>
+                        <p style="font-size: 0.85rem;">Hafta içi: 09:00 - 18:00</p>
+                    </div>
                 </div>
+
+                <div class="info-block">
+                    <div class="info-icon" style="background: rgba(10, 25, 47, 0.1); color: var(--color-primary);"><i data-lucide="mail"></i></div>
+                    <div class="info-content">
+                        <strong>E-posta</strong>
+                        <a href="mailto:info@assamsigorta.com.tr">info@assamsigorta.com.tr</a>
+                    </div>
+                </div>
+
+                <!-- Butonlar -->
+                <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 15px;">
+                    <a href="https://wa.me/905337049879" target="_blank" class="btn btn-primary" style="background-color: #25D366; color: white; width: 100%;">
+                        <i data-lucide="message-circle" style="margin-right: 5px;"></i> WhatsApp ile Yazın
+                    </a>
+                    <a href="teklif-al.html" class="btn btn-outline" style="width: 100%;">Teklif Formu Doldur</a>
+                </div>
+
             </div>
+
+            <!-- Sağ: Dev Harita (Overlap Efektli) -->
+            <div class="map-wrapper-modern">
+                <!-- Gerçek Google Maps yerleştirmesi (İlkadım, Samsun) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11986.94589252327!2d36.3218567!3d41.2820358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x408877bc954f0a0d%3A0x6b6a655cd29a435!2s%C4%B0lkad%C4%B1m%2C%20Samsun!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
         </section>
     </main>
 
@@ -131,47 +224,41 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-col brand-col">
-                <a href="index.html" class="footer-logo logo">ASSAM<span>SİGORTA</span></a>
-                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı, doğru bilgilendirme ve ihtiyaca uygun danışmanlık hizmeti sunuyoruz.</p>
+                <a href="index.html" class="footer-logo logo">
+                    <span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span>
+                </a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
             </div>
             
             <div class="footer-col">
-                <h3>Hızlı Bağlantılar</h3>
+                <h3>Menü</h3>
                 <ul>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="teklif-al.html">Teklif Al</a></li>
+                    <li><a href="hasar-destek.html">Hasar Desteği</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </div>
 
-            <div class="footer-col">
-                <h3>Sigorta Ürünleri</h3>
-                <ul>
-                    <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
-                    <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
-                    <li><a href="sigorta/dask.html">DASK</a></li>
-                    <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
-                </ul>
-            </div>
-
             <div class="footer-col contact-col">
-                <h3>İletişim</h3>
+                <h3>Bize Ulaşın</h3>
                 <ul>
                     <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
-                    <li><a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a></li>
-                    <li><a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a></li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
+                    <li><i data-lucide="mail"></i> info@assamsigorta.com.tr</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
                 <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>

@@ -4,140 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zorunlu Trafik Sigortası | ASSAM SİGORTA</title>
-    <meta name="description" content="Zorunlu trafik sigortası ile olası bir kazada karşı tarafa verebileceğiniz zararları güvence altına alın. En uygun teklifler ASSAM Sigorta'da.">
+    <meta name="description" content="Zorunlu trafik sigortası ile olası bir kazada karşı tarafa verebileceğiniz zararları güvence altına alın.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Alt klasörde olduğumuz için CSS yolları ../ ile başlar -->
+    <!-- Alt klasörde olduğumuz için ../ kullanıyoruz -->
     <link rel="stylesheet" href="../assets/css/variables.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body style="background-color: var(--color-bg-light);">
 
-    <!-- Üst Bilgi Barı -->
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigasyon -->
+    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="../index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="../index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
             
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="../index.html">Ana Sayfa</a></li>
                     <li><a href="../hakkimizda.html">Hakkımızda</a></li>
                     <li class="dropdown">
-                        <a href="../sigorta-urunleri.html" class="active">Sigorta Ürünleri <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                        <a href="../sigorta-urunleri.html" class="active">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="trafik-sigortasi.html" style="color: var(--secondary-color); font-weight: 600;">Zorunlu Trafik Sigortası</a></li>
+                            <li><a href="trafik-sigortasi.html" style="color: var(--color-secondary); font-weight: 600;">Zorunlu Trafik Sigortası</a></li>
                             <li><a href="kasko.html">Kasko Sigortası</a></li>
-                            <li><a href="dask.html">DASK</a></li>
+                            <li><a href="dask.html">DASK (Deprem Sigortası)</a></li>
                             <li><a href="konut-sigortasi.html">Konut Sigortası</a></li>
-                            <li><a href="tamamlayici-saglik.html">Tamamlayıcı Sağlık Sigortası</a></li>
+                            <li><a href="tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
                             <li><a href="isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
-                            <li><a href="../sigorta-urunleri.html" class="view-all">Tüm Ürünleri İncele &rarr;</a></li>
                         </ul>
                     </li>
-                    <li><a href="../hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="../rehber.html">Sigorta Rehberi</a></li>
+                    <li><a href="../hasar-destek.html">Hasar Anında</a></li>
                     <li><a href="../iletisim.html">İletişim</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <a href="../teklif-al.html" class="btn btn-primary">Teklif Al</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü"><i data-lucide="menu"></i></button>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <a href="../teklif-al.html" class="btn btn-glow">Teklif Al</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- İç Sayfa Başlığı -->
-        <section class="page-header">
-            <div class="container">
-                <h1>Zorunlu Trafik Sigortası</h1>
-                <p>Üçüncü şahıslara verebileceğiniz maddi ve bedeni zararlara karşı yasal güvenceniz.</p>
+        <!-- İç Sayfa Başlığı (Premium Gradient) -->
+        <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
+            <div class="container reveal-up">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: rgba(0, 212, 255, 0.1); color: var(--color-secondary); border-radius: 50%; margin-bottom: 20px;">
+                    <i data-lucide="car" style="width: 30px; height: 30px;"></i>
+                </div>
+                <h1 style="color: #fff; font-size: 3.2rem; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 10px;">Zorunlu Trafik Sigortası</h1>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem;">Karayollarında üçüncü şahıslara verebileceğiniz zararlara karşı yasal güvenceniz.</p>
             </div>
         </section>
 
-        <!-- Ürün Detay İçeriği ve Sidebar -->
-        <section class="section">
+        <section class="section" style="padding-top: 60px;">
             <div class="container product-inner">
                 
                 <!-- Sol Alan: Ana İçerik -->
-                <div class="product-content">
-                    <h2>Zorunlu Trafik Sigortası Nedir?</h2>
-                    <p>2918 sayılı Karayolları Trafik Kanunu uyarınca, trafiğe çıkan her motorlu aracın yaptırmakla yükümlü olduğu Zorunlu Mali Sorumluluk Sigortası'dır (Trafik Sigortası). Olası bir kaza durumunda, karşı taraftaki araca veya üçüncü şahıslara verebileceğiniz maddi ve bedeni zararları yasal limitler dahilinde karşılar.</p>
+                <div class="product-content reveal-left" style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.03);">
+                    <h2 style="font-size: 2rem; color: var(--color-primary); letter-spacing: -0.5px; margin-bottom: 20px;">Trafik Sigortası Nedir?</h2>
+                    <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">2918 sayılı Karayolları Trafik Kanunu uyarınca, trafiğe çıkan her motorlu aracın yaptırmakla yükümlü olduğu Zorunlu Mali Sorumluluk Sigortası'dır. Olası bir kaza durumunda, karşı taraftaki araca veya üçüncü şahıslara verebileceğiniz maddi ve bedeni zararları yasal limitler dahilinde karşılar.</p>
                     
-                    <h3>Hangi İhtiyaçlara Yöneliktir?</h3>
-                    <p>Bu poliçe, kaza anında bütçenizi korumanın yanı sıra yasal zorunluluğu yerine getirmenizi sağlar. Trafik sigortası olmayan araçların trafiğe çıkması yasaktır; tespit edilmesi halinde araç trafikten men edilir ve para cezası uygulanır.</p>
-
-                    <h3>Genel Olarak Kapsadığı Riskler</h3>
-                    <p>Hazine ve Maliye Bakanlığı tarafından belirlenen genel şartlar doğrultusunda trafik sigortası şu durumları güvence altına alır:</p>
-                    <ul>
-                        <li>Karşı araçta veya üçüncü şahıslara ait mallarda oluşan maddi hasarlar.</li>
-                        <li>Kazaya karışan üçüncü şahısların ilk yardım, muayene ve tedavi giderleri.</li>
-                        <li>Kaza sonucu üçüncü şahıslarda oluşabilecek sürekli sakatlık durumu.</li>
-                        <li>Kaza sonucu vefat durumunda, vefat edenin desteğinden yoksun kalanlara ödenecek tazminatlar.</li>
+                    <h3 style="font-size: 1.5rem; color: var(--color-primary); margin: 35px 0 15px 0;">Genel Olarak Kapsadığı Riskler</h3>
+                    <p style="color: var(--color-text-muted); margin-bottom: 15px;">Hazine ve Maliye Bakanlığı tarafından belirlenen genel şartlar doğrultusunda şu durumları güvence altına alır:</p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; color: var(--color-text-dark); font-weight: 500;">
+                            <i data-lucide="check-circle" style="color: var(--color-accent); flex-shrink: 0; margin-top: 2px;"></i> Karşı araçta veya üçüncü şahıslara ait mallarda oluşan maddi hasarlar.
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; color: var(--color-text-dark); font-weight: 500;">
+                            <i data-lucide="check-circle" style="color: var(--color-accent); flex-shrink: 0; margin-top: 2px;"></i> Kazaya karışan üçüncü şahısların ilk yardım, muayene ve tedavi giderleri.
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; color: var(--color-text-dark); font-weight: 500;">
+                            <i data-lucide="check-circle" style="color: var(--color-accent); flex-shrink: 0; margin-top: 2px;"></i> Kaza sonucu üçüncü şahıslarda oluşabilecek sürekli sakatlık durumu tazminatları.
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; color: var(--color-text-dark); font-weight: 500;">
+                            <i data-lucide="check-circle" style="color: var(--color-accent); flex-shrink: 0; margin-top: 2px;"></i> Vefat durumunda, vefat edenin desteğinden yoksun kalanlara ödenecek tazminatlar.
+                        </li>
                     </ul>
 
-                    <div class="alert alert-warning" style="margin: 30px 0; display: flex; gap: 15px; align-items: flex-start;">
-                        <i data-lucide="info" style="flex-shrink: 0; margin-top: 2px;"></i>
-                        <div>
-                            <strong>Önemli Uyarı:</strong> Trafik sigortası sadece karşı tarafa ve üçüncü şahıslara verilen zararları teminat altındaki limitlere kadar karşılar. <strong>Kendi aracınızdaki hasarları karşılamaz.</strong> Kendi aracınızı güvence altına almak için Trafik Sigortasına ek olarak <a href="kasko.html" style="color: var(--secondary-color); text-decoration: underline; font-weight: 600;">Kasko Sigortası</a> yaptırmanız gerekmektedir. Teminatlar ve istisnalar poliçenizin şartlarına göre değişiklik gösterebilir.
+                    <div class="alert alert-warning" style="background: #FFFBEB; border: 1px solid #FDE68A; border-left: 4px solid #F59E0B; padding: 20px; border-radius: var(--radius-sm); display: flex; gap: 15px; align-items: flex-start; margin: 40px 0;">
+                        <i data-lucide="info" style="color: #D97706; flex-shrink: 0; margin-top: 2px;"></i>
+                        <div style="color: #92400E; font-size: 0.95rem; line-height: 1.6;">
+                            <strong style="display: block; margin-bottom: 5px; color: #B45309;">Önemli Uyarı:</strong> Trafik sigortası sadece karşı tarafa ve üçüncü şahıslara verilen zararları teminat altındaki limitlere kadar karşılar. <strong>Kendi aracınızdaki hasarları karşılamaz.</strong> Kendi aracınızı korumak için <a href="kasko.html" style="color: #B45309; text-decoration: underline; font-weight: 600;">Kasko Sigortası</a> yaptırmalısınız.
                         </div>
                     </div>
 
-                    <h3>Sık Sorulan Sorular</h3>
-                    <div class="faq-accordion" style="margin-top: 20px; max-width: 100%;">
+                    <h3 style="font-size: 1.5rem; color: var(--color-primary); margin: 35px 0 20px 0;">Sık Sorulan Sorular</h3>
+                    <div class="faq-accordion">
                         <div class="faq-item">
                             <button class="faq-question">Trafik sigortası fiyatları nasıl belirlenir? <i data-lucide="chevron-down"></i></button>
                             <div class="faq-answer"><p>Fiyatlar; aracın türüne, kullanıldığı ile ve sürücünün hasar geçmişine (hasarsızlık kademesi) göre Hazine Müsteşarlığı'nın belirlediği tavan fiyatlar çerçevesinde sigorta şirketleri tarafından belirlenir.</p></div>
                         </div>
                         <div class="faq-item">
                             <button class="faq-question">Poliçe süresi ne kadardır? <i data-lucide="chevron-down"></i></button>
-                            <div class="faq-answer"><p>Zorunlu Trafik Sigortası poliçeleri 1 yıl (365 gün) süreli olarak düzenlenir. Her yıl vade tarihi gelmeden yenilenmesi gereklidir.</p></div>
+                            <div class="faq-answer"><p>Zorunlu Trafik Sigortası poliçeleri 1 yıl (365 gün) süreli olarak düzenlenir. Her yıl vade tarihi gelmeden yenilenmesi yasal bir zorunluluktur.</p></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sağ Alan: Sidebar (Teklif ve İletişim) -->
-                <aside class="product-sidebar">
-                    <div class="contact-sidebar" style="margin-bottom: 25px;">
-                        <h3>Bu Ürün İçin Teklif Alın</h3>
-                        <p>Aracınızın ruhsat bilgilerini ileterek size en uygun trafik sigortası primlerini karşılaştırmalı olarak sunmamızı sağlayabilirsiniz.</p>
-                        <a href="../teklif-al.html" class="btn btn-primary" style="width: 100%;">Hemen Teklif Al</a>
-                    </div>
-                    
-                    <div class="contact-sidebar">
-                        <h3>Sorularınız mı var?</h3>
-                        <p>Uzman danışmanlarımızla hemen görüşün.</p>
+                <!-- Sağ Alan: Sticky (Yapışkan) Teklif Paneli -->
+                <aside class="product-sidebar reveal-right" style="position: sticky; top: 120px;">
+                    <div style="background: #fff; border: 1px solid rgba(0,0,0,0.05); padding: 35px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); margin-bottom: 30px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: var(--color-primary);">Hemen Teklif Alın</h3>
+                        <p style="margin-bottom: 25px; color: var(--color-text-muted); font-size: 0.95rem;">Aracınızın ruhsat bilgilerini ileterek size en uygun trafik sigortası primlerini karşılaştırmalı olarak sunmamızı sağlayın.</p>
+                        <a href="../teklif-al.html" class="btn btn-glow" style="width: 100%; margin-bottom: 20px;">Teklif İste <i data-lucide="arrow-right"></i></a>
                         
-                        <a href="tel:+905337049879" class="contact-card">
-                            <div class="icon" style="width: 32px; height: 32px;"><i data-lucide="phone" style="width: 16px; height: 16px;"></i></div>
+                        <hr style="border: 0; height: 1px; background: var(--border-color); margin: 25px 0;">
+                        
+                        <h4 style="font-size: 1.1rem; color: var(--color-text-dark); margin-bottom: 15px;">Hızlı Destek Hattı</h4>
+                        <a href="tel:+905337049879" class="contact-card" style="display: flex; align-items: center; gap: 15px; padding: 12px; border-radius: var(--radius-md); background: var(--color-bg-light); transition: var(--transition-fast); margin-bottom: 10px;">
+                            <div style="width: 40px; height: 40px; background: rgba(0, 212, 255, 0.1); color: var(--color-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i data-lucide="phone"></i></div>
                             <div>
-                                <strong style="font-size: 0.95rem;">+90 533 704 98 79</strong>
+                                <strong style="display: block; color: var(--color-text-dark); font-size: 1rem;">+90 533 704 98 79</strong>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Hemen Arayın</span>
                             </div>
                         </a>
-                        
-                        <a href="https://wa.me/905337049879" target="_blank" class="contact-card whatsapp">
-                            <div class="icon" style="width: 32px; height: 32px;"><i data-lucide="message-circle" style="width: 16px; height: 16px;"></i></div>
+                        <a href="https://wa.me/905337049879" target="_blank" class="contact-card" style="display: flex; align-items: center; gap: 15px; padding: 12px; border-radius: var(--radius-md); background: rgba(37, 211, 102, 0.05); border: 1px solid rgba(37, 211, 102, 0.2); transition: var(--transition-fast);">
+                            <div style="width: 40px; height: 40px; background: rgba(37, 211, 102, 0.1); color: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i data-lucide="message-circle"></i></div>
                             <div>
-                                <strong style="font-size: 0.95rem;">WhatsApp'tan Yazın</strong>
+                                <strong style="display: block; color: #128C7E; font-size: 1rem;">WhatsApp Destek</strong>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Mesaj Gönder</span>
                             </div>
                         </a>
                     </div>
@@ -147,51 +147,43 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
+        <!-- Footer içeriği aynı standart -->
         <div class="container footer-inner">
             <div class="footer-col brand-col">
-                <a href="../index.html" class="footer-logo logo">ASSAM<span>SİGORTA</span></a>
-                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı, doğru bilgilendirme ve ihtiyaca uygun danışmanlık hizmeti sunuyoruz.</p>
+                <a href="../index.html" class="footer-logo logo">
+                    <span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span>
+                </a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
             </div>
-            
             <div class="footer-col">
-                <h3>Hızlı Bağlantılar</h3>
+                <h3>Menü</h3>
                 <ul>
                     <li><a href="../hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="../hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="../teklif-al.html">Teklif Al</a></li>
+                    <li><a href="../hasar-destek.html">Hasar Desteği</a></li>
                     <li><a href="../iletisim.html">İletişim</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col">
-                <h3>Sigorta Ürünleri</h3>
-                <ul>
-                    <li><a href="trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
-                    <li><a href="kasko.html">Kasko Sigortası</a></li>
-                    <li><a href="dask.html">DASK</a></li>
-                    <li><a href="konut-sigortasi.html">Konut Sigortası</a></li>
-                </ul>
-            </div>
-
             <div class="footer-col contact-col">
-                <h3>İletişim</h3>
+                <h3>Bize Ulaşın</h3>
                 <ul>
                     <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
-                    <li><a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a></li>
-                    <li><a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a></li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
+                    <li><i data-lucide="mail"></i> info@assamsigorta.com.tr</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
                 <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="../kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="../gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>

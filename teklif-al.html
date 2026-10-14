@@ -4,152 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teklif Al | ASSAM SİGORTA</title>
-    <meta name="description" content="İhtiyacınıza en uygun sigorta poliçesi teklifini almak için formumuzu doldurun, uzmanlarımız size en kısa sürede ulaşsın.">
+    <meta name="description" content="İhtiyacınıza en uygun sigorta poliçesi teklifini almak için saniyeler içinde formumuzu doldurun. Uzmanlarımız anında destek sağlasın.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Form sayfasına özel ek tasarım (Arka planda soyut şekiller) */
+        .form-page-wrapper {
+            position: relative;
+            background-color: var(--color-bg-light);
+            overflow: hidden;
+            padding: 60px 0 120px 0;
+        }
+        .form-bg-shapes .shape {
+            position: absolute; filter: blur(100px); opacity: 0.3; border-radius: 50%; z-index: 0; pointer-events: none;
+        }
+        .form-bg-shapes .s1 { width: 500px; height: 500px; background: var(--color-secondary); top: -150px; left: -150px; }
+        .form-bg-shapes .s2 { width: 400px; height: 400px; background: var(--color-primary-light); bottom: 100px; right: -100px; }
+    </style>
 </head>
 <body>
 
-    <!-- Üst Bilgi Barı ve Header (Standart) -->
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
-
+    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
+            
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
                     <li class="dropdown">
-                        <a href="sigorta-urunleri.html">Sigorta Ürünleri <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                        <a href="sigorta-urunleri.html">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
                             <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
-                            <li><a href="sigorta/dask.html">DASK</a></li>
+                            <li><a href="sigorta/dask.html">DASK (Deprem Sigortası)</a></li>
                             <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
-                            <li><a href="sigorta-urunleri.html" class="view-all">Tüm Ürünleri İncele &rarr;</a></li>
+                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
+                            <li><a href="sigorta/isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
                         </ul>
                     </li>
-                    <li><a href="hasar-destek.html">Hasar ve Destek</a></li>
-                    <li><a href="rehber.html">Sigorta Rehberi</a></li>
+                    <li><a href="hasar-destek.html">Hasar Anında</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </nav>
+
             <div class="header-actions">
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü"><i data-lucide="menu"></i></button>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Sigorta Teklifi Alın</h1>
-                <p>İhtiyacınıza uygun seçenekleri değerlendirebilmemiz için formu doldurmanız yeterlidir.</p>
-            </div>
-        </section>
+    <main class="form-page-wrapper">
+        <div class="form-bg-shapes">
+            <div class="shape s1"></div>
+            <div class="shape s2"></div>
+        </div>
 
-        <section class="section bg-light">
-            <div class="container form-container">
-                <div class="form-wrapper">
-                    <div class="form-header">
-                        <h2>Teklif Talep Formu</h2>
-                        <p>Lütfen iletişim bilgilerinizi ve ilgilendiğiniz sigorta türünü seçin. Gereksiz veya hassas veri (TC Kimlik, sağlık verisi vb.) talep etmiyoruz.</p>
+        <!-- İç Sayfa Başlığı (Minimal) -->
+        <div class="container text-center reveal-up" style="position: relative; z-index: 1; margin-bottom: 50px;">
+            <h1 style="font-size: 3.2rem; letter-spacing: -1.5px; color: var(--color-primary); margin-bottom: 15px;">Size Özel Teklifi Hazırlayalım.</h1>
+            <p style="font-size: 1.2rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto;">Formu doldurun, sizin için en kapsamlı ve en uygun fiyatlı güvence seçeneklerini saniyeler içinde karşılaştıralım.</p>
+        </div>
+
+        <section class="container form-container reveal-up" style="position: relative; z-index: 1;">
+            
+            <!-- Sol Alan: Modern Cam Efektli Form -->
+            <div class="form-wrapper" style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.5); box-shadow: var(--shadow-lg);">
+                <div class="form-header">
+                    <h2>Teklif Talebi</h2>
+                    <p style="color: var(--color-text-muted);">Gereksiz (TC Kimlik, plaka vb.) veri istemiyoruz. Sizi arayıp net bilgileri alacağız.</p>
+                </div>
+
+                <form id="quote-form" class="custom-form" novalidate>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adSoyad">Ad Soyad <span class="required" style="color:#FF0055;">*</span></label>
+                            <input type="text" id="adSoyad" name="adSoyad" class="form-control" placeholder="Örn: Ahmet Yılmaz" required>
+                            <span class="error-msg">Lütfen adınızı ve soyadınızı girin.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefon Numarası <span class="required" style="color:#FF0055;">*</span></label>
+                            <input type="tel" id="telefon" name="telefon" class="form-control" placeholder="05XX XXX XX XX" required pattern="^[0-9\-\+\s\(\)]{10,15}$">
+                            <span class="error-msg">Lütfen geçerli bir telefon numarası girin.</span>
+                        </div>
                     </div>
 
-                    <!-- Teklif Formu -->
-                    <form id="quote-form" class="custom-form" novalidate>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="adSoyad">Ad Soyad <span class="required">*</span></label>
-                                <input type="text" id="adSoyad" name="adSoyad" class="form-control" placeholder="Örn: Ahmet Yılmaz" required>
-                                <span class="error-msg">Lütfen adınızı ve soyadınızı girin.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefon">Telefon Numarası <span class="required">*</span></label>
-                                <input type="tel" id="telefon" name="telefon" class="form-control" placeholder="05XX XXX XX XX" required pattern="^[0-9\-\+\s\(\)]{10,15}$">
-                                <span class="error-msg">Lütfen geçerli bir telefon numarası girin.</span>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="eposta">E-posta Adresi <span class="optional">(İsteğe Bağlı)</span></label>
-                                <input type="email" id="eposta" name="eposta" class="form-control" placeholder="ornek@mail.com">
-                                <span class="error-msg">Geçerli bir e-posta adresi girin.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="sigortaTuru">Sigorta Türü <span class="required">*</span></label>
-                                <select id="sigortaTuru" name="sigortaTuru" class="form-control" required>
-                                    <option value="" disabled selected>Lütfen Seçiniz</option>
-                                    <option value="Trafik">Zorunlu Trafik Sigortası</option>
-                                    <option value="Kasko">Kasko Sigortası</option>
-                                    <option value="Dask">DASK</option>
-                                    <option value="Konut">Konut Sigortası</option>
-                                    <option value="Saglik">Tamamlayıcı / Özel Sağlık</option>
-                                    <option value="Isyeri">İşyeri Paket Sigortası</option>
-                                    <option value="Diger">Diğer</option>
-                                </select>
-                                <span class="error-msg">Lütfen bir sigorta türü seçin.</span>
-                            </div>
-                        </div>
-
+                    <div class="form-row">
                         <div class="form-group">
-                            <label for="mesaj">Eklemek İstedikleriniz / Notunuz <span class="optional">(İsteğe Bağlı)</span></label>
-                            <textarea id="mesaj" name="mesaj" class="form-control" rows="4" placeholder="Araç markası, konut metrekare bilgisi veya diğer notlarınızı belirtebilirsiniz."></textarea>
+                            <label for="eposta">E-posta Adresi <span class="optional">(İsteğe Bağlı)</span></label>
+                            <input type="email" id="eposta" name="eposta" class="form-control" placeholder="ornek@mail.com">
+                            <span class="error-msg">Geçerli bir e-posta adresi girin.</span>
                         </div>
-
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="kvkk" name="kvkk" required>
-                            <label for="kvkk"><a href="kvkk.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum ve kabul ediyorum. <span class="required">*</span></label>
-                            <span class="error-msg checkbox-error">Formu göndermek için onaylamanız gerekmektedir.</span>
+                        <div class="form-group">
+                            <label for="sigortaTuru">Hangi Ürün İçin Teklif İstiyorsunuz? <span class="required" style="color:#FF0055;">*</span></label>
+                            <select id="sigortaTuru" name="sigortaTuru" class="form-control" required style="cursor: pointer;">
+                                <option value="" disabled selected>Lütfen Seçiniz</option>
+                                <option value="Trafik">Zorunlu Trafik Sigortası</option>
+                                <option value="Kasko">Kasko Sigortası</option>
+                                <option value="Dask">DASK</option>
+                                <option value="Konut">Konut Sigortası</option>
+                                <option value="Saglik">Tamamlayıcı / Özel Sağlık</option>
+                                <option value="Isyeri">İşyeri Paket Sigortası</option>
+                                <option value="Diger">Diğer</option>
+                            </select>
+                            <span class="error-msg">Lütfen bir sigorta türü seçin.</span>
                         </div>
+                    </div>
 
-                        <!-- Başarı ve Hata Bildirim Alanı -->
-                        <div id="form-alert" class="alert hidden"></div>
+                    <div class="form-group">
+                        <label for="mesaj">Mesajınız <span class="optional">(İsteğe Bağlı)</span></label>
+                        <textarea id="mesaj" name="mesaj" class="form-control" rows="3" placeholder="Araç markası, ev metrekare bilgisi veya sormak istediklerinizi yazabilirsiniz..."></textarea>
+                    </div>
 
-                        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
-                            <span class="btn-text">Teklif Talebini Gönder</span>
-                            <i data-lucide="loader-2" class="spinner hidden"></i>
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="contact-sidebar">
-                    <h3>Alternatif İletişim Kanalları</h3>
-                    <p>Form doldurmak istemezseniz, acentemize doğrudan aşağıdaki kanallardan ulaşarak da teklif alabilirsiniz.</p>
+                    <div class="checkbox-group" style="margin-bottom: 30px; display: flex; align-items: flex-start; gap: 12px;">
+                        <input type="checkbox" id="kvkk" name="kvkk" required style="width: 20px; height: 20px; margin-top: 2px; accent-color: var(--color-primary);">
+                        <label for="kvkk" style="font-weight: 400; color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; cursor: pointer;">
+                            <a href="kvkk.html" target="_blank" style="color: var(--color-secondary); font-weight: 600;">KVKK Aydınlatma Metni</a>'ni okudum ve iletişim bilgilerimin kullanılmasına izin veriyorum. <span class="required" style="color:#FF0055;">*</span>
+                        </label>
+                        <span class="error-msg checkbox-error" style="width: 100%; display: none; color: #FF0055;">Formu göndermek için aydınlatma metnini onaylamanız gerekmektedir.</span>
+                    </div>
+
+                    <!-- Bildirim Alanı -->
+                    <div id="form-alert" class="alert hidden"></div>
+
+                    <button type="submit" class="btn btn-glow btn-submit" id="submit-btn" style="width: 100%; padding: 18px; font-size: 1.1rem; border-radius: var(--radius-md);">
+                        <span class="btn-text">Talebimi Gönder <i data-lucide="send" style="margin-left: 8px;"></i></span>
+                        <i data-lucide="loader-2" class="spinner hidden" style="animation: spin 1s linear infinite;"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Sağ Alan: Alternatif İletişim (Havada Duran Kartlar) -->
+            <div class="contact-sidebar-modern reveal-right">
+                <div class="sidebar-widget" style="background: transparent; border: none; padding: 0;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: var(--color-primary);">Acil Teklif mi Lazım?</h3>
+                    <p style="margin-bottom: 30px; color: var(--color-text-muted);">Form doldurmakla vakit kaybetmek istemiyorsanız, doğrudan müşteri temsilcilerimize bağlanın.</p>
                     
-                    <a href="tel:+905337049879" class="contact-card">
-                        <div class="icon"><i data-lucide="phone"></i></div>
+                    <a href="tel:+905337049879" class="contact-card" style="background: #fff; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); border-radius: var(--radius-md); padding: 20px;">
+                        <div class="icon" style="background: rgba(0, 212, 255, 0.1); color: var(--color-secondary); width: 50px; height: 50px;"><i data-lucide="phone-call"></i></div>
                         <div>
-                            <strong>Bizi Arayın</strong>
-                            <span>+90 533 704 98 79</span>
+                            <span style="font-size: 0.85rem; color: var(--color-text-muted); display: block; margin-bottom: 2px;">Bizi Arayın</span>
+                            <strong style="font-size: 1.15rem; color: var(--color-primary); font-family: var(--font-heading);">+90 533 704 98 79</strong>
                         </div>
                     </a>
                     
-                    <a href="https://wa.me/905337049879" target="_blank" class="contact-card whatsapp">
-                        <div class="icon"><i data-lucide="message-circle"></i></div>
+                    <a href="https://wa.me/905337049879" target="_blank" class="contact-card whatsapp" style="background: #fff; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); border-radius: var(--radius-md); padding: 20px;">
+                        <div class="icon" style="background: rgba(37, 211, 102, 0.1); color: #25D366; width: 50px; height: 50px;"><i data-lucide="message-circle"></i></div>
                         <div>
-                            <strong>WhatsApp'tan Yazın</strong>
-                            <span>Hızlı İletişim Hattı</span>
+                            <span style="font-size: 0.85rem; color: var(--color-text-muted); display: block; margin-bottom: 2px;">Hızlı Destek</span>
+                            <strong style="font-size: 1.15rem; color: var(--color-primary); font-family: var(--font-heading);">WhatsApp İletişim</strong>
                         </div>
                     </a>
                 </div>
@@ -157,9 +179,45 @@
         </section>
     </main>
 
-    <!-- (Footer Kısmı Buraya Gelecek - Hakkımızda sayfasındaki ile aynı) -->
-    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo logo">
+                    <span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span>
+                </a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Menü</h3>
+                <ul>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hasar-destek.html">Hasar Desteği</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Bize Ulaşın</h3>
+                <ul>
+                    <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
+                    <li><i data-lucide="mail"></i> info@assamsigorta.com.tr</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>

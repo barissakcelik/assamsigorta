@@ -4,128 +4,324 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasar ve Destek | ASSAM SİGORTA</title>
-    <meta name="description" content="Olası bir hasar durumunda izlemeniz gereken adımlar, gerekli belgeler ve ASSAM Sigorta hasar destek süreçleri.">
+    <meta name="description" content="Olası bir hasar durumunda panik yapmayın. İzlemeniz gereken adımlar, gerekli belgeler ve ASSAM Sigorta 7/24 hasar destek süreçleri.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Hasar sayfasına özel Timeline (Zaman Çizelgesi) Tasarımı */
+        .timeline-modern {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* Ortadaki çizgi (Masaüstü için) */
+        .timeline-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px; /* Mobilde solda */
+            height: 100%;
+            width: 2px;
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        @media (min-width: 992px) {
+            .timeline-modern::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-step:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Çizgi Üzerindeki İkon */
+        .timeline-icon-box {
+            position: absolute;
+            left: 0;
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            border: 3px solid var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            z-index: 2;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* İçerik Kutusu */
+        .timeline-content-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0,0,0,0.03);
+            margin-left: 70px;
+            width: calc(100% - 70px);
+            position: relative;
+            transition: var(--transition-normal);
+        }
+
+        .timeline-content-box:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-secondary);
+        }
+
+        /* Kutu Başlığı ve Yazılar */
+        .timeline-content-box h3 {
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-content-box p {
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* MASAÜSTÜ ZİG-ZAG GÖRÜNÜMÜ */
+        @media (min-width: 992px) {
+            .timeline-step:nth-child(odd) {
+                justify-content: flex-start;
+            }
+            .timeline-step:nth-child(even) {
+                justify-content: flex-end;
+            }
+
+            .timeline-icon-box {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-step:nth-child(odd) .timeline-content-box {
+                margin-left: 0;
+                margin-right: 50px;
+                width: calc(50% - 40px);
+            }
+
+            .timeline-step:nth-child(even) .timeline-content-box {
+                margin-left: 50px;
+                width: calc(50% - 40px);
+            }
+
+            /* Kutuların çizgiye bakan okları (Opsiyonel estetik detay) */
+            .timeline-step:nth-child(odd) .timeline-content-box::after {
+                content: '';
+                position: absolute;
+                top: 20px;
+                right: -10px;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                transform: rotate(45deg);
+                border-top: 1px solid rgba(0,0,0,0.03);
+                border-right: 1px solid rgba(0,0,0,0.03);
+            }
+            .timeline-step:nth-child(even) .timeline-content-box::after {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: -10px;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                transform: rotate(45deg);
+                border-bottom: 1px solid rgba(0,0,0,0.03);
+                border-left: 1px solid rgba(0,0,0,0.03);
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="top-info">
-                <a href="mailto:info@assamsigorta.com.tr"><i data-lucide="mail"></i> info@assamsigorta.com.tr</a>
-                <a href="tel:+905337049879"><i data-lucide="phone"></i> +90 533 704 98 79</a>
-            </div>
-            <div class="top-address">
-                <i data-lucide="map-pin"></i> İlkadım, Samsun | Levha No: T12411-3BMM
-            </div>
-        </div>
-    </div>
-
+    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">ASSAM<span>SİGORTA</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">ASSAM</span><span class="logo-dot">.</span>
+            </a>
+            
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
                     <li class="dropdown">
-                        <a href="sigorta-urunleri.html">Sigorta Ürünleri <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                        <a href="sigorta-urunleri.html">Çözümlerimiz <i data-lucide="chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="sigorta/trafik-sigortasi.html">Zorunlu Trafik Sigortası</a></li>
                             <li><a href="sigorta/kasko.html">Kasko Sigortası</a></li>
-                            <li><a href="sigorta/dask.html">DASK</a></li>
+                            <li><a href="sigorta/dask.html">DASK (Deprem Sigortası)</a></li>
                             <li><a href="sigorta/konut-sigortasi.html">Konut Sigortası</a></li>
-                            <li><a href="sigorta-urunleri.html" class="view-all">Tüm Ürünleri İncele &rarr;</a></li>
+                            <li><a href="sigorta/tamamlayici-saglik.html">Tamamlayıcı Sağlık</a></li>
+                            <li><a href="sigorta/isyeri-sigortasi.html">İşyeri Paket Sigortası</a></li>
                         </ul>
                     </li>
-                    <li><a href="hasar-destek.html" class="active">Hasar ve Destek</a></li>
-                    <li><a href="rehber.html">Sigorta Rehberi</a></li>
+                    <li><a href="hasar-destek.html" class="active">Hasar Anında</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
             </nav>
+
             <div class="header-actions">
-                <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü"><i data-lucide="menu"></i></button>
+                <a href="tel:+905337049879" class="header-contact">
+                    <div class="contact-icon"><i data-lucide="phone-call"></i></div>
+                    <div class="contact-text">
+                        <span>Bizi Arayın</span>
+                        <strong>+90 533 704 98 79</strong>
+                    </div>
+                </a>
+                <a href="teklif-al.html" class="btn btn-glow">Teklif Al</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Hasar ve Destek</h1>
-                <p>Olası bir hasar anında yanınızdayız. Süreci nasıl yöneteceğinizi adım adım inceleyin.</p>
+    <main style="background-color: var(--color-bg-light); min-height: 100vh; padding-bottom: 100px;">
+        
+        <!-- İç Sayfa Başlığı -->
+        <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
+            <div class="container reveal-up">
+                <h1 style="color: #fff; font-size: 3.2rem; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 10px;">Hasar ve Destek</h1>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem;">Olası bir kaza veya hasar anında panik yapmayın, yanınızdayız.</p>
             </div>
         </section>
 
-        <section class="section">
+        <!-- Acil Durum Kutusu -->
+        <div class="container reveal-up" style="margin-top: -40px; position: relative; z-index: 10;">
+            <div style="background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); border-left: 6px solid #FF0055; padding: 30px; display: flex; gap: 20px; align-items: flex-start;">
+                <div style="background: rgba(255, 0, 85, 0.1); color: #FF0055; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i data-lucide="alert-triangle" style="width: 30px; height: 30px;"></i>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 10px; font-family: var(--font-heading);">Acil Durum İletişimi</h3>
+                    <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-bottom: 15px;">Şu an bir kaza veya acil hasar yerindeyseniz, web sitemizdeki formları kullanmak yerine <strong>doğrudan hasar destek hattımızı</strong> arayın. Çekici gönderimi veya polis/tutanak süreçlerinde sizi telefonda yönlendirelim.</p>
+                    <a href="tel:+905337049879" class="btn btn-primary" style="background: #FF0055; box-shadow: 0 5px 15px rgba(255, 0, 85, 0.3);">
+                        <i data-lucide="phone"></i> Hemen Arayın: +90 533 704 98 79
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section class="section" style="padding-top: 80px;">
             <div class="container">
-                <!-- Uyarı Kutusu -->
-                <div class="alert alert-warning" style="margin-bottom: 40px; display: flex; gap: 15px; align-items: flex-start; background-color: #FFFBEB; border: 1px solid #FDE68A; color: #92400E;">
-                    <i data-lucide="alert-triangle" style="flex-shrink: 0; margin-top: 2px;"></i>
-                    <div>
-                        <strong>Acil Durum Bildirimi:</strong> Hasar anında hızlı müdahale için doğrudan +90 533 704 98 79 numaralı telefonumuzdan bize ulaşın. Web sitesi iletişim formları acil durum bildirimleri için uygun değildir.
-                    </div>
+                <div class="section-header text-center reveal-up">
+                    <h2 style="color: var(--color-primary);">Adım Adım Hasar Süreci</h2>
+                    <p>Olay yerinde ve sonrasında yapmanız gerekenler.</p>
                 </div>
 
-                <div class="section-header" style="text-align: left; margin-bottom: 40px;">
-                    <h2>Hasar Anında İzlenecek Adımlar</h2>
-                    <p>Panik yapmayın. Aşağıdaki adımları sırasıyla uygulayarak hasar sürecinizi sorunsuz başlatabilirsiniz.</p>
-                </div>
+                <!-- Modern Zig-Zag Timeline -->
+                <div class="timeline-modern">
+                    
+                    <div class="timeline-step reveal-up">
+                        <div class="timeline-icon-box" style="border-color: #FF0055; color: #FF0055;"><i data-lucide="shield-alert"></i></div>
+                        <div class="timeline-content-box">
+                            <h3><span style="color: #FF0055;">01.</span> Güvenliğinizi Sağlayın</h3>
+                            <p>Öncelikle can güvenliğinizi teyit edin. Gerekli durumlarda aracı terk edip güvenli bir alana geçin. Yaralanma veya yangın riski varsa hemen 112 Acil Çağrı Merkezi'ni arayarak ambulans, itfaiye veya polis talep edin.</p>
+                        </div>
+                    </div>
 
-                <!-- Adımlar (Timeline Yapısı) -->
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-icon"><i data-lucide="shield-alert"></i></div>
-                        <div class="timeline-content">
-                            <h3>1. Güvenliğinizi Sağlayın</h3>
-                            <p>Öncelikle can güvenliğinizi teyit edin. Gerekli durumlarda hemen 112 Acil Çağrı Merkezi'ni arayarak ambulans, itfaiye veya kolluk kuvvetlerinden (polis/jandarma) yardım isteyin.</p>
+                    <div class="timeline-step reveal-up">
+                        <div class="timeline-icon-box"><i data-lucide="camera"></i></div>
+                        <div class="timeline-content-box">
+                            <h3><span style="color: var(--color-secondary);">02.</span> Durumu Kayıt Altına Alın</h3>
+                            <p>Olay yerini terk etmeden ve araçların yerini değiştirmeden önce, hasarın boyutunu ve kazanın oluş şeklini yansıtacak net fotoğraflar ve videolar çekin. Uzak, yakın ve plakaları gösterecek açılar kullanın.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon"><i data-lucide="camera"></i></div>
-                        <div class="timeline-content">
-                            <h3>2. Durumu Kayıt Altına Alın</h3>
-                            <p>Olay yerini terk etmeden veya hasarlı bölgeyi değiştirmeden önce, hasarın ve olayın genel görünümünü yansıtacak net fotoğraflar ve videolar çekin.</p>
+
+                    <div class="timeline-step reveal-up">
+                        <div class="timeline-icon-box"><i data-lucide="file-signature"></i></div>
+                        <div class="timeline-content-box">
+                            <h3><span style="color: var(--color-secondary);">03.</span> Resmi Tutanakları Tutun</h3>
+                            <p>Sadece maddi hasarlı bir trafik kazasıysa, diğer sürücü ile "Maddi Hasarlı Kaza Tespit Tutanağı"nı eksiksiz doldurun ve imzalayın. Hırsızlık, yangın veya anlaşmazlık durumlarında mutlaka polis veya jandarma raporu tutturun.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon"><i data-lucide="file-signature"></i></div>
-                        <div class="timeline-content">
-                            <h3>3. Resmi Tutanakları Düzenleyin</h3>
-                            <p>Trafik kazalarında maddi hasarlı trafik kazası tespit tutanağını eksiksiz doldurun. Hırsızlık, yangın veya polis/jandarma müdahalesi gerektiren durumlarda mutlaka resmi ifade ve görgü tespit tutanağı tutturun.</p>
+
+                    <div class="timeline-step reveal-up">
+                        <div class="timeline-icon-box"><i data-lucide="phone-forwarded"></i></div>
+                        <div class="timeline-content-box">
+                            <h3><span style="color: var(--color-secondary);">04.</span> Acentenize Bilgi Verin</h3>
+                            <p>Tutanak ve fotoğrafları tamamladıktan sonra acentemizi arayın. Uzmanlarımız dosyanızın açılması, çekici gönderimi, ikame araç talebi ve servise yönlendirme gibi süreçleri sizin adınıza başlatacaktır.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon"><i data-lucide="phone-call"></i></div>
-                        <div class="timeline-content">
-                            <h3>4. Acentenizle İletişime Geçin</h3>
-                            <p>Mümkün olan en kısa sürede (en geç 5 iş günü içinde) poliçenizi hazırlayan sigorta şirketinin hasar hattına veya doğrudan acentemize bilgi verin. Hasar dosyanızın açılması için yönlendirme talep edin.</p>
+
+                    <div class="timeline-step reveal-up">
+                        <div class="timeline-icon-box" style="border-color: var(--color-accent); color: var(--color-accent);"><i data-lucide="folder-check"></i></div>
+                        <div class="timeline-content-box">
+                            <h3><span style="color: var(--color-accent);">05.</span> Dosya Takibi ve Onarım</h3>
+                            <p>Açılan hasar dosyanıza eksper atandıktan sonra onarım süreci başlar. Acentemiz üzerinden dosyanızın durumunu, eksik belgeleri ve ödeme/onarım onaylarını adım adım takip edebilirsiniz.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon"><i data-lucide="folder-search"></i></div>
-                        <div class="timeline-content">
-                            <h3>5. Hasar Dosyasının Takibi</h3>
-                            <p>Açılan hasar dosya numaranızı not edin. Eksper ataması, belge talepleri ve sürecin sonlanmasına kadar acentemizden veya ilgili sigorta şirketinden dosyanızın durumunu takip edebilirsiniz.</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- (Footer Kısmı Buraya Gelecek - İletişim sayfasındaki ile aynı) -->
-    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo logo">
+                    <span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span>
+                </a>
+                <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Menü</h3>
+                <ul>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hasar-destek.html">Hasar Desteği</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Bize Ulaşın</h3>
+                <ul>
+                    <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
+                    <li><i data-lucide="phone"></i> +90 533 704 98 79</li>
+                    <li><i data-lucide="mail"></i> info@assamsigorta.com.tr</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/main.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>
