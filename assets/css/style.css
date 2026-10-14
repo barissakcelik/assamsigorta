@@ -88,9 +88,23 @@
 }
 
 .header-inner { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; display: flex; align-items: baseline;}
-.logo-text { color: var(--color-primary); }
-.logo-dot { color: var(--color-secondary); font-size: 2.2rem; }
+/* --- Header Logo Ayarları --- */
+.logo { 
+    display: flex; 
+    align-items: center; 
+}
+
+.logo-img {
+    max-height: 55px; /* Logonun menüdeki büyüklüğünü buradan artırıp azaltabilirsiniz */
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-fast);
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
 
 .desktop-nav { display: none; }
 .nav-list { display: flex; gap: 32px; align-items: center; }
