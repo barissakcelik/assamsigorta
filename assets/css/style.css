@@ -95,7 +95,7 @@
 }
 
 .logo-img {
-    max-height: 90px; /* Boyutu 55px'ten 90px'e çıkardık, duruma göre 100px veya 120px de yapabilirsiniz */
+    max-height: 120px; /* Boyutu 55px'ten 90px'e çıkardık, duruma göre 100px veya 120px de yapabilirsiniz */
     width: auto;
     object-fit: contain;
     transition: var(--transition-fast);
