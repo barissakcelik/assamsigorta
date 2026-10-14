@@ -95,10 +95,12 @@
 }
 
 .logo-img {
-    max-height: 55px; /* Logonun menüdeki büyüklüğünü buradan artırıp azaltabilirsiniz */
+    max-height: 90px; /* Boyutu 55px'ten 90px'e çıkardık, duruma göre 100px veya 120px de yapabilirsiniz */
     width: auto;
     object-fit: contain;
     transition: var(--transition-fast);
+    /* Eğer logo çok yukarıda veya aşağıda durursa margin değerleriyle oynayabilirsiniz: */
+    /* margin-top: 5px; */ 
 }
 
 .logo:hover .logo-img {
