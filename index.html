@@ -6,23 +6,21 @@
     <title>ASSAM SİGORTA | Dijital Güvence Asistanınız</title>
     <meta name="description" content="ASSAM SİGORTA ile araç, konut, sağlık ve işletme sigortası ihtiyaçlarınızda modern, şeffaf ve ihtiyaca yönelik danışmanlık alın.">
     
-    <!-- Animasyon Kütüphanesi ve İkonlar -->
+    <link rel="icon" type="image/png" href="assets/img/assam_logo.png">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- CSS Dosyalarımız -->
-    <link rel="icon" type="image/png" href="assets/img/assam_logo.png">
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Yüzen Modern Header (Glassmorphism) -->
+    <!-- Yüzen Modern Header (Altı Çizgili) -->
     <header class="header" id="header">
         <div class="container header-inner">
-<a href="index.html" class="logo">
-    <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
-</a>
+            <a href="index.html" class="logo">
+                <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
+            </a>
             
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
@@ -59,13 +57,13 @@
     </header>
 
     <main>
-        <!-- Modern Hero Bölümü -->
+        <!-- Modern Hero Bölümü (Video Arka Planlı) -->
         <section class="hero-premium">
-            <!-- Arka planda hareketli gradient ve soyut şekiller -->
-            <div class="hero-bg-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-            </div>
+            <!-- Arka Planda Soft Video -->
+            <video autoplay muted loop playsinline class="hero-bg-video">
+                <source src="assets/img/bg-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div> <!-- Yazıların okunması için katman -->
 
             <div class="container hero-premium-inner">
                 <div class="hero-content reveal-left">
@@ -91,12 +89,10 @@
                     </div>
                 </div>
 
-                <!-- Sağ Taraf Katmanlı 3D Görsel -->
                 <div class="hero-visual reveal-right">
                     <div class="glass-card-main">
                         <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Modern Yaşam" class="main-img">
                         
-                        <!-- Floating Element 1 -->
                         <div class="floating-element el-1">
                             <div class="icon-wrap"><i data-lucide="shield-check"></i></div>
                             <div>
@@ -105,7 +101,6 @@
                             </div>
                         </div>
 
-                        <!-- Floating Element 2 -->
                         <div class="floating-element el-2">
                             <div class="icon-wrap warning"><i data-lucide="zap"></i></div>
                             <div>
@@ -142,21 +137,17 @@
             </div>
         </section>
 
-        <!-- Slider Ürün Kartları (Büyük Görsellerle) -->
+        <!-- Ekrana Sığan 4'lü Ürün Grid'i -->
         <section class="section product-showcase reveal-up">
             <div class="container">
-                <div class="section-header-row">
+                <div class="section-header-row" style="margin-bottom: 50px;">
                     <div class="header-content">
                         <h2>Sizin İçin Ne Yapabiliriz?</h2>
                         <p>Hayatın her anında sizi ve sevdiklerinizi koruyacak yenilikçi çözümler.</p>
                     </div>
-                    <div class="slider-controls">
-                        <button class="slider-btn prev-btn"><i data-lucide="arrow-left"></i></button>
-                        <button class="slider-btn next-btn"><i data-lucide="arrow-right"></i></button>
-                    </div>
                 </div>
 
-                <div class="slider-track" id="product-slider">
+                <div class="product-grid-4">
                     <!-- Kart 1 -->
                     <div class="premium-card">
                         <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Araç Sigortası" class="card-img">
@@ -164,7 +155,7 @@
                         <div class="card-info">
                             <div class="icon-badge"><i data-lucide="car"></i></div>
                             <h3>Araç Sigortaları</h3>
-                            <p>Zorunlu trafik ve kasko sigortasında en uygun teklifleri karşılaştırarak sunuyoruz.</p>
+                            <p>Trafik ve kasko sigortasında en uygun teklifleri karşılaştırarak sunuyoruz.</p>
                             <a href="sigorta/kasko.html" class="btn-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
@@ -176,7 +167,7 @@
                         <div class="card-info">
                             <div class="icon-badge"><i data-lucide="home"></i></div>
                             <h3>Konut ve DASK</h3>
-                            <p>Evinizi deprem, yangın, su baskını ve hırsızlığa karşı güvence altına alın.</p>
+                            <p>Evinizi deprem, yangın ve su baskınına karşı güvence altına alın.</p>
                             <a href="sigorta/konut-sigortasi.html" class="btn-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
@@ -188,7 +179,7 @@
                         <div class="card-info">
                             <div class="icon-badge"><i data-lucide="heart-pulse"></i></div>
                             <h3>Sağlık Sigortaları</h3>
-                            <p>Özel hastanelerde fark ücreti ödemeden TSS ile sağlığınızı koruyun.</p>
+                            <p>Özel hastanelerde fark ücreti ödemeden sağlığınızı koruyun.</p>
                             <a href="sigorta/tamamlayici-saglik.html" class="btn-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
@@ -208,7 +199,7 @@
             </div>
         </section>
 
-        <!-- Süreç: Nasıl Çalışıyoruz? (Animasyonlu Step by Step) -->
+        <!-- Süreç: Nasıl Çalışıyoruz? -->
         <section class="section process-section bg-light reveal-up">
             <div class="container">
                 <div class="section-header text-center">
@@ -223,18 +214,14 @@
                         <h3>İhtiyacınızı İletin</h3>
                         <p>Web sitemizden veya WhatsApp üzerinden temel bilgilerinizi paylaşın.</p>
                     </div>
-                    
                     <div class="process-arrow"><i data-lucide="arrow-right"></i></div>
-                    
                     <div class="process-card">
                         <div class="step-num">02</div>
                         <div class="icon-box"><i data-lucide="search"></i></div>
                         <h3>Biz Analiz Edelim</h3>
                         <p>Anlaşmalı olduğumuz 20+ şirketten size en uygun fiyat ve teminatları bulalım.</p>
                     </div>
-
                     <div class="process-arrow"><i data-lucide="arrow-right"></i></div>
-
                     <div class="process-card">
                         <div class="step-num">03</div>
                         <div class="icon-box"><i data-lucide="shield"></i></div>
@@ -263,11 +250,13 @@
 
     </main>
 
-    <!-- Footer (Kısa versiyon, CSS ile stillendireceğiz) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-col brand-col">
-                <a href="index.html" class="footer-logo logo">ASSAM<span>.</span></a>
+                <a href="index.html" class="footer-logo logo">
+                    <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
+                </a>
                 <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
             </div>
             
@@ -284,18 +273,31 @@
                 <h3>Bize Ulaşın</h3>
                 <ul>
                     <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
-                    <li><i data-lucide="phone"></i>  +90 530 381 90 90</li>
+                    <li><i data-lucide="phone"></i> +90 530 381 90 90</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
                 <p>&copy; 2026 ASSAM SİGORTA. Tüm hakları saklıdır.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="kvkk.html" style="color: rgba(255,255,255,0.5);">KVKK</a>
+                    <a href="gizlilik.html" style="color: rgba(255,255,255,0.5);">Gizlilik Politikası</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Animasyon Kütüphanesini Başlat -->
+    <!-- Yeni Sabit (Floating) WhatsApp Butonu -->
+    <a href="https://wa.me/905303819090" target="_blank" class="floating-wa-btn">
+        <div class="floating-wa-icon"><i data-lucide="message-circle"></i></div>
+        <div class="floating-wa-text">
+            <span class="wa-title">Online Teklif</span>
+            <span class="wa-desc">WhatsApp'tan yazabilirsiniz</span>
+        </div>
+    </a>
+
+    <!-- JS -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>

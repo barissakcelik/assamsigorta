@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigorta Çözümlerimiz | ASSAM SİGORTA</title>
     <meta name="description" content="Araç, konut, sağlık ve kurumsal işletme sigortası ürünlerimizi inceleyin. Size en uygun güvenceyi ASSAM Sigorta'da bulun.">
-    
     <link rel="icon" type="image/png" href="assets/img/assam_logo.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,36 +17,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        /* Bu sayfaya özel Grid yapılandırması */
-        .all-products-grid {
-            display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 40px;
-        }
+        .all-products-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 40px; }
         @media (min-width: 768px) { .all-products-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1024px) { .all-products-grid { grid-template-columns: repeat(3, 1fr); } }
         
-        .product-grid-card {
-            position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 400px;
-            transition: var(--transition-slow); border: 1px solid rgba(0,0,0,0.05);
-        }
+        .product-grid-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 400px; transition: var(--transition-slow); border: 1px solid rgba(0,0,0,0.05); }
         .product-grid-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
-        .product-grid-card img {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;
-        }
+        .product-grid-card img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
         .product-grid-card:hover img { transform: scale(1.08); }
-        
-        .pg-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to top, rgba(10,25,47,0.95) 0%, rgba(10,25,47,0.3) 60%, transparent 100%);
-        }
-        
-        .pg-content {
-            position: absolute; bottom: 0; left: 0; width: 100%; padding: 35px 30px; color: #fff; z-index: 2;
-        }
-        .pg-icon {
-            width: 50px; height: 50px; background: rgba(255,255,255,0.15); backdrop-filter: blur(5px);
-            border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
-            margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.3); transition: var(--transition-fast);
-        }
+        .pg-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(10,25,47,0.95) 0%, rgba(10,25,47,0.3) 60%, transparent 100%); }
+        .pg-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 35px 30px; color: #fff; z-index: 2; }
+        .pg-icon { width: 50px; height: 50px; background: rgba(255,255,255,0.15); backdrop-filter: blur(5px); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.3); transition: var(--transition-fast); }
         .product-grid-card:hover .pg-icon { background: var(--color-secondary); color: var(--color-primary); border-color: var(--color-secondary); }
         .pg-content h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
         .pg-content p { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.5; }
@@ -56,12 +37,11 @@
 </head>
 <body style="background-color: var(--color-bg-light);">
 
-    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
-<a href="index.html" class="logo">
-    <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
-</a>
+            <a href="index.html" class="logo">
+                <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
+            </a>
             <nav class="desktop-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Ana Sayfa</a></li>
@@ -96,7 +76,6 @@
     </header>
 
     <main>
-        <!-- İç Sayfa Başlığı -->
         <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); padding-bottom: 60px;">
             <div class="container reveal-up">
                 <h1 style="color: #fff; font-size: 3.5rem; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 15px;">Tüm Çözümlerimiz</h1>
@@ -104,12 +83,9 @@
             </div>
         </section>
 
-        <!-- Grid Ürün Listesi -->
         <section class="section" style="padding-top: 60px; padding-bottom: 100px;">
             <div class="container">
                 <div class="all-products-grid">
-                    
-                    <!-- Kart 1 -->
                     <div class="product-grid-card reveal-up">
                         <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Trafik Sigortası">
                         <div class="pg-overlay"></div>
@@ -120,8 +96,6 @@
                             <a href="sigorta/trafik-sigortasi.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Kart 2 -->
                     <div class="product-grid-card reveal-up" style="transition-delay: 0.1s;">
                         <img src="https://images.unsplash.com/photo-1560518883-ce09059eeefa?auto=format&fit=crop&w=800&q=80" alt="Kasko">
                         <div class="pg-overlay"></div>
@@ -132,8 +106,6 @@
                             <a href="sigorta/kasko.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Kart 3 -->
                     <div class="product-grid-card reveal-up" style="transition-delay: 0.2s;">
                         <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Konut">
                         <div class="pg-overlay"></div>
@@ -144,8 +116,6 @@
                             <a href="sigorta/konut-sigortasi.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Kart 4 -->
                     <div class="product-grid-card reveal-up">
                         <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?auto=format&fit=crop&w=800&q=80" alt="DASK">
                         <div class="pg-overlay"></div>
@@ -156,8 +126,6 @@
                             <a href="sigorta/dask.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Kart 5 -->
                     <div class="product-grid-card reveal-up" style="transition-delay: 0.1s;">
                         <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" alt="Sağlık">
                         <div class="pg-overlay"></div>
@@ -168,8 +136,6 @@
                             <a href="sigorta/tamamlayici-saglik.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Kart 6 -->
                     <div class="product-grid-card reveal-up" style="transition-delay: 0.2s;">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="İşyeri">
                         <div class="pg-overlay"></div>
@@ -180,17 +146,15 @@
                             <a href="sigorta/isyeri-sigortasi.html" class="pg-link">Detayları İncele <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-col brand-col">
-                <a href="index.html" class="footer-logo logo"><span style="color:#fff;">ASSAM</span><span style="color: var(--color-secondary);">.</span></a>
+                <a href="index.html" class="footer-logo logo"><img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img"></a>
                 <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
             </div>
             <div class="footer-col">
@@ -219,6 +183,14 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/905303819090" target="_blank" class="floating-wa-btn">
+        <div class="floating-wa-icon"><i data-lucide="message-circle"></i></div>
+        <div class="floating-wa-text">
+            <span class="floating-wa-title">Online Teklif</span>
+            <span class="floating-wa-desc">WhatsApp'tan yazabilirsiniz</span>
+        </div>
+    </a>
 
     <script src="assets/js/main.js"></script>
 </body>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim | ASSAM SİGORTA</title>
     <meta name="description" content="Samsun İlkadım'daki ofisimizi ziyaret edin veya uzman sigorta danışmanlarımıza anında dijital kanallardan ulaşın.">
-    
     <link rel="icon" type="image/png" href="assets/img/assam_logo.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,109 +17,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        /* İletişim sayfasına özel asimetrik harita düzeni */
-        .contact-page-wrapper {
-            position: relative;
-            background-color: var(--color-bg-light);
-            padding: 80px 0 120px 0;
-            overflow: hidden;
-        }
-        
-        .contact-grid-modern {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        @media (min-width: 992px) {
-            .contact-grid-modern {
-                grid-template-columns: 350px 1fr; /* Sol taraf ince bilgi kartı, sağ taraf dev harita */
-                align-items: stretch;
-            }
-        }
-
-        .contact-info-panel {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .info-block {
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-        
-        .info-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--color-secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .info-content strong {
-            display: block;
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            color: var(--color-text-dark);
-            margin-bottom: 5px;
-        }
-
-        .info-content p, .info-content a {
-            color: var(--color-text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            transition: var(--transition-fast);
-        }
-
-        .info-content a:hover {
-            color: var(--color-secondary);
-        }
-
-        .map-wrapper-modern {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            min-height: 400px;
-            z-index: 1;
-        }
-        
-        @media (min-width: 992px) {
-            .map-wrapper-modern {
-                /* Masaüstünde haritayı sola doğru biraz kaydırıp panelin altına girmesini sağlıyoruz (Overlap effect) */
-                margin-left: -50px; 
-            }
-        }
-
-        .map-wrapper-modern iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 500px;
-            border: none;
-            filter: grayscale(20%) contrast(1.1); /* Haritayı sitenin kurumsal renklerine uyumlu hale getiren hafif filtre */
-        }
+        .contact-page-wrapper { position: relative; background-color: var(--color-bg-light); padding: 80px 0 120px 0; overflow: hidden; }
+        .contact-grid-modern { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
+        @media (min-width: 992px) { .contact-grid-modern { grid-template-columns: 350px 1fr; align-items: stretch; } }
+        .contact-info-panel { background: #fff; padding: 40px 30px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 30px; position: relative; z-index: 2; }
+        .info-block { display: flex; gap: 15px; align-items: flex-start; }
+        .info-icon { width: 45px; height: 45px; background: rgba(0, 212, 255, 0.1); color: var(--color-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .info-content strong { display: block; font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-text-dark); margin-bottom: 5px; }
+        .info-content p, .info-content a { color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; transition: var(--transition-fast); }
+        .info-content a:hover { color: var(--color-secondary); }
+        .map-wrapper-modern { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); min-height: 400px; z-index: 1; }
+        @media (min-width: 992px) { .map-wrapper-modern { margin-left: -50px; } }
+        .map-wrapper-modern iframe { width: 100%; height: 100%; min-height: 500px; border: none; filter: grayscale(20%) contrast(1.1); }
     </style>
 </head>
 <body>
 
-    <!-- Modern Header -->
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="index.html" class="logo">
-                <!-- Güncellenmiş Logo -->
                 <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
             </a>
             
@@ -158,8 +74,6 @@
     </header>
 
     <main class="contact-page-wrapper">
-        
-        <!-- Sayfa Başlığı -->
         <div class="container reveal-up" style="position: relative; z-index: 3;">
             <div style="max-width: 600px;">
                 <div class="hero-badge" style="background: rgba(0, 212, 255, 0.1); color: var(--color-secondary); border: none; margin-bottom: 15px;">Bize Ulaşın</div>
@@ -169,10 +83,7 @@
         </div>
 
         <section class="container contact-grid-modern reveal-up">
-            
-            <!-- Sol: Yüzen İletişim Bilgi Paneli -->
             <div class="contact-info-panel">
-                
                 <div class="info-block">
                     <div class="info-icon"><i data-lucide="map-pin"></i></div>
                     <div class="info-content">
@@ -198,19 +109,15 @@
                     </div>
                 </div>
 
-                <!-- Butonlar -->
                 <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 15px;">
                     <a href="https://wa.me/905303819090" target="_blank" class="btn btn-primary" style="background-color: #25D366; color: white; width: 100%;">
                         <i data-lucide="message-circle" style="margin-right: 5px;"></i> WhatsApp ile Yazın
                     </a>
                     <a href="teklif-al.html" class="btn btn-outline" style="width: 100%;">Teklif Formu Doldur</a>
                 </div>
-
             </div>
 
-            <!-- Sağ: Dev Harita (Overlap Efektli) -->
             <div class="map-wrapper-modern">
-                <!-- Nokta Atışı Adres Yerleştirmesi (Bahçelievler Mah. 100. Yıl Bulvarı) -->
                 <iframe 
                     src="https://maps.google.com/maps?q=Bah%C3%A7elievler%20Mahallesi%2C%20100.%20Y%C4%B1l%20Bulvar%C4%B1%20No%3A%20263%2F4%20%C4%B0lkad%C4%B1m%20%2F%20Samsun&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                     allowfullscreen="" 
@@ -218,17 +125,14 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-col brand-col">
                 <a href="index.html" class="footer-logo logo">
-                    <!-- Footer için Güncellenmiş Logo -->
-                    <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img" style="filter: brightness(0) invert(1);">
+                    <img src="assets/img/assam_logo.png" alt="ASSAM Sigorta" class="logo-img">
                 </a>
                 <p>2012'den bugüne, araç, konut, sağlık ve işletme sigortalarında güvene dayalı danışmanlık.</p>
             </div>
@@ -246,7 +150,7 @@
                 <h3>Bize Ulaşın</h3>
                 <ul>
                     <li><i data-lucide="map-pin"></i> 100. Yıl Bulvarı No: 263/4 İlkadım / Samsun</li>
-                    <li><i data-lucide="phone"></i>  +90 530 381 90 90</li>
+                    <li><i data-lucide="phone"></i> +90 530 381 90 90</li>
                     <li><i data-lucide="mail"></i> info@assamsigorta.com.tr</li>
                 </ul>
             </div>
@@ -261,6 +165,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Yeni Sabit (Floating) WhatsApp Butonu -->
+    <a href="https://wa.me/905303819090" target="_blank" class="floating-wa-btn">
+        <div class="floating-wa-icon"><i data-lucide="message-circle"></i></div>
+        <div class="floating-wa-text">
+            <span class="floating-wa-title">Online Teklif</span>
+            <span class="floating-wa-desc">WhatsApp'tan yazabilirsiniz</span>
+        </div>
+    </a>
 
     <script src="assets/js/main.js"></script>
 </body>
