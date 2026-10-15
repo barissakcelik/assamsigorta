@@ -74,10 +74,25 @@
 .header.scrolled { padding: 10px 0; box-shadow: var(--shadow-sm); }
 .header-inner { display: flex; justify-content: space-between; align-items: center; }
 
-/* Logo - Boyut 135px Yapıldı */
-.logo { display: flex; align-items: center; }
-.logo-img { max-height: 135px; width: auto; object-fit: contain; transition: var(--transition-fast); }
-.logo:hover .logo-img { transform: scale(1.02); opacity: 0.9; }
+/* Logo - Daha da Büyütüldü ve Ölçeklendirildi */
+.logo { 
+    display: flex; 
+    align-items: center; 
+}
+
+.logo-img { 
+    max-height: 160px; /* Yüksekliği biraz daha artırdık */
+    width: auto; 
+    object-fit: contain; 
+    transform: scale(1.4); /* İŞTE SIR BURADA: Logoyu olduğu yerde %40 daha büyütür */
+    transform-origin: left center; /* Büyürken sola dayalı büyümesini sağlar */
+    transition: var(--transition-fast); 
+}
+
+.logo:hover .logo-img { 
+    transform: scale(1.45); /* Üzerine gelince çok hafif daha büyür */
+    opacity: 0.9; 
+}
 
 .desktop-nav { display: none; }
 .nav-list { display: flex; gap: 32px; align-items: center; }
